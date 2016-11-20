@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="top"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/scale_30dp">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="@dimen/scale_48dp"
+        android:layout_height="@dimen/scale_48dp"
+        android:layout_gravity="top"
+        android:layout_marginLeft="@dimen/scale_16dp"
+        android:src="@drawable/ic_achievement_unlocked_circle_purple" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/scale_16dp"
+        android:layout_marginRight="@dimen/scale_16dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.carnot.custom_views.AppTextViewMedium
+                android:id="@+id/txt_notification_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Passport"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_16sp" />
+
+            <com.carnot.custom_views.AppTextViewMedium
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00 AM"
+                android:textSize="@dimen/textsize_12sp" />
+        </LinearLayout>
+
+        <com.carnot.custom_views.AppTextViewMedium
+            android:id="@+id/txt_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/scale_11dp"
+            android:text="your message herelsj slkjf;kls dfl;sjfls djfl sjdf l;sflsj fl slf sdlf skldfjsl;kdj fsl;kdfj skl;jflksjflk your message herelsj slkjf;kls dfl;sjfls djfl sjdf l;sflsj fl slf sdlf skldfjsl;kdj fsl;kdfj skl;jflksjflkyour message herelsj slkjf;kls dfl;sjfls djfl sjdf l;sflsj fl slf sdlf skldfjsl;kdj fsl;kdfj skl;jflksjflkyour message herelsj slkjf;kls dfl;sjfls djfl sjdf l;sflsj fl slf sdlf skldfjsl;kdj fsl;kdfj skl;jflksjflkyour message herelsj slkjf;kls dfl;sjfls djfl sjdf l;sflsj fl slf sdlf skldfjsl;kdj fsl;kdfj skl;jflksjflk your message herelsj slkjf;kls dfl;sjfls djfl sjdf l;sflsj fl slf sdlf skldfjsl;kdj fsl;kdfj skl;jflksjflkyour message herelsj slkjf;kls dfl;sjfls djfl sjdf l;sflsj fl slf sdlf skldfjsl;kdj fsl;kdfj skl;jflksjflk"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_12sp" />
+    </LinearLayout>
+
+</LinearLayout>

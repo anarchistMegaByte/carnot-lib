@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/scale_104dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.carnot.custom_views.AppTextViewMedium
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:padding="@dimen/scale_5dp"
+        android:text="2:18 PM, Today"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_8sp" />
+
+    <com.carnot.custom_views.AppTextViewMedium
+        android:id="@+id/txt_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center"
+        android:padding="@dimen/scale_10dp"
+        android:text="29 Thakkar village, Andheri Mumbai"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_8sp" />
+
+</LinearLayout>

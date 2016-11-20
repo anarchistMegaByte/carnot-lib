@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_light_transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:layout_marginTop="@dimen/scale_48dp">
+
+        <ImageView
+            android:layout_width="@dimen/scale_240dp"
+            android:layout_height="@dimen/scale_100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/img_caronmap_small" />
+
+        <View
+            android:id="@+id/view_scan_bar_left_right"
+            android:layout_width="@dimen/scale_280dp"
+            android:layout_height="@dimen/scale_140dp"
+            android:layout_gravity="center"
+            android:background="@drawable/scan_background" />
+
+        <View
+            android:id="@+id/view_scan_bar_right_left"
+            android:layout_width="@dimen/scale_280dp"
+            android:layout_height="@dimen/scale_140dp"
+            android:layout_gravity="center"
+            android:background="@drawable/scan_background_reverse" />
+
+    </FrameLayout>
+
+    <!--android:layout_below="@id/lbl_error_code_title"-->
+
+
+    <com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout
+        android:id="@+id/expandable_car_error_codes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:ael_duration="@integer/expand_animation_duration"
+        app:ael_interpolator="decelerate"
+        app:expanded="true"
+
+        ><!--app:ael_duration="@integer/expand_animation_duration"
+        app:ael_interpolator="decelerate"-->
+
+        <!--<LinearLayout
+            android:id="@+id/ll_errorcodes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">-->
+
+        <com.carnot.custom_views.AppTextViewLight
+            android:id="@+id/lbl_error_code_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="2 error code found"
+            android:textColor="@color/white" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_errors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbl_error_code_title"
+            android:layout_centerHorizontal="true"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/scale_10dp"
+            android:paddingTop="@dimen/scale_13dp" />
+
+
+        <!--</LinearLayout>-->
+    </com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout>
+
+
+    <com.carnot.custom_views.AppButton
+        android:id="@+id/btn_scan_car_error"
+        android:layout_width="@dimen/scale_152dp"
+        android:layout_height="@dimen/scale_36dp"
+        android:gravity="center"
+        android:text="@string/lbl_scan_for_errors"
+        android:textColor="@color/white" />
+
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <com.carnot.custom_views.AppTextViewMedium
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/scale_13dp"
+        android:layout_marginLeft="@dimen/scale_10dp"
+        android:layout_marginTop="@dimen/scale_29dp"
+        android:background="@color/transparent"
+        android:gravity="center_vertical"
+        android:text="@string/lbl_connection"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_audibleErrors"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scale_48dp"
+        android:layout_marginTop="@dimen/scale_29dp"
+        android:layout_marginLeft="@dimen/scale_10dp"
+        android:layout_marginRight="@dimen/scale_10dp"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <com.carnot.custom_views.AppTextViewMedium
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingLeft="@dimen/scale_15dp"
+            android:text="@string/lbl_help1"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/scale_15dp"
+            android:src="@drawable/ic_nav_back_purple_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_read_car_e_manual"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scale_48dp"
+        android:layout_marginLeft="@dimen/scale_10dp"
+        android:layout_marginRight="@dimen/scale_10dp"
+        android:layout_marginTop="@dimen/scale_1dp"
+        android:visibility="gone"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <com.carnot.custom_views.AppTextViewMedium
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingLeft="@dimen/scale_15dp"
+            android:text="@string/lbl_help2"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/scale_15dp"
+            android:src="@drawable/ic_nav_back_purple_right" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_need_help"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scale_48dp"
+        android:layout_marginBottom="@dimen/scale_15dp"
+        android:layout_marginLeft="@dimen/scale_10dp"
+        android:layout_marginRight="@dimen/scale_10dp"
+        android:layout_marginTop="@dimen/scale_1dp"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <com.carnot.custom_views.AppTextViewMedium
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingLeft="@dimen/scale_15dp"
+            android:text="@string/lbl_help3"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/scale_15dp"
+            android:src="@drawable/ic_nav_back_purple_right" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black_tyrepressur_bg">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_tyrepressur_bg"
+        android:paddingBottom="@dimen/scale_15dp"
+        android:paddingLeft="@dimen/scale_50dp"
+        android:paddingRight="@dimen/scale_50dp"
+        android:paddingTop="@dimen/scale_15dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/scale_36dp"
+            android:layout_marginRight="@dimen/scale_36dp">
+
+            <View
+                android:id="@+id/line_leftcenter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/scale_1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/white" />
+
+            <com.carnot.custom_views.AppTextViewMedium
+                android:id="@+id/lbl_ok"
+                android:layout_width="@dimen/scale_40dp"
+                android:layout_height="@dimen/scale_40dp"
+                android:background="@drawable/circle_light_green"
+                android:gravity="center"
+                android:text="@string/lbl_ok" />
+
+            <View
+                android:id="@+id/line_rightcenter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/scale_1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_left_tyre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+
+            android:orientation="vertical">
+
+            <com.carnot.custom_views.AppTextViewMedium
+                android:id="@+id/txt_tyre_bottom_left"
+                android:layout_width="@dimen/scale_72dp"
+                android:layout_height="@dimen/scale_24dp"
+
+                android:background="@drawable/tyre_background"
+                android:gravity="center"
+                android:text="26"
+                android:textColor="@color/status_green_start_color" />
+
+            <View
+                android:layout_width="@dimen/scale_1dp"
+                android:layout_height="@dimen/scale_64dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_toLeftOf="@+id/line_leftcenter"
+
+                android:background="@color/white" />
+
+            <com.carnot.custom_views.AppTextViewMedium
+                android:id="@+id/txt_tyre_bottom_right"
+                android:layout_width="@dimen/scale_72dp"
+                android:layout_height="@dimen/scale_24dp"
+                android:background="@drawable/tyre_background"
+                android:gravity="center"
+                android:text="26"
+                android:textColor="@color/status_green_start_color" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_right_tyre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+
+            android:orientation="vertical">
+
+            <com.carnot.custom_views.AppTextViewMedium
+                android:id="@+id/txt_tyre_front_left"
+                android:layout_width="@dimen/scale_72dp"
+                android:layout_height="@dimen/scale_24dp"
+                android:layout_alignParentTop="true"
+
+                android:layout_toRightOf="@+id/line_rightcenter"
+                android:background="@drawable/tyre_background"
+                android:gravity="center"
+                android:text="26"
+                android:textColor="@color/status_green_start_color" />
+
+            <View
+                android:layout_width="@dimen/scale_1dp"
+                android:layout_height="@dimen/scale_64dp"
+                android:layout_gravity="center_horizontal"
+
+
+                android:background="@color/white" />
+
+            <com.carnot.custom_views.AppTextViewMedium
+                android:id="@+id/txt_tyre_front_right"
+                android:layout_width="@dimen/scale_72dp"
+                android:layout_height="@dimen/scale_24dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/line_rightcenter"
+                android:background="@drawable/tyre_background"
+                android:gravity="center"
+                android:text="26"
+                android:textColor="@color/status_green_start_color" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal|top"
+            android:background="@drawable/arrow_grey_background"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

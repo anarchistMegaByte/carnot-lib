@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dark_gray"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/scale_10dp"
+    android:paddingTop="@dimen/scale_10dp">
+
+    <com.carnot.custom_views.AppTextViewLight
+        android:id="@+id/txt_counter"
+        android:layout_width="@dimen/scale_60dp"
+        android:layout_height="@dimen/scale_50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/scale_10dp"
+        android:background="@drawable/rounded_grey_background_counter"
+        android:gravity="center"
+        android:padding="@dimen/scale_5dp"
+        android:text="10/15"
+        tools:textSize="@dimen/textsize_20sp" />
+
+    <com.carnot.custom_views.AppTextViewMedium
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/scale_10dp"
+        android:layout_marginRight="@dimen/scale_10dp"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        tools:text="2 Hard Accelerations" />
+
+</LinearLayout>

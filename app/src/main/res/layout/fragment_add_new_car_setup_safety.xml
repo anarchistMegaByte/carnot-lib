@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialog_background_color">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.carnot.custom_views.AppTextViewMedium
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/scale_16dp"
+            android:layout_marginRight="@dimen/scale_16dp"
+            android:layout_marginTop="@dimen/scale_25dp"
+            android:text="@string/lbl_safety_first_info"
+            android:textColor="@color/white" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/scale_16dp"
+                android:layout_marginRight="@dimen/scale_16dp"
+                android:layout_marginTop="@dimen/scale_33dp"
+                android:orientation="vertical">
+
+
+                <com.carnot.custom_views.AppTextViewMedium
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/scale_4dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/lbl_contact_1"
+                    android:textColor="@color/white" />
+
+                <com.carnot.custom_views.AppTextViewLight
+                    android:id="@+id/txt_contact1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/scale_4dp"
+                    android:layout_marginTop="@dimen/scale_5dp"
+                    android:drawableRight="@drawable/ic_nav_arrow_down_white"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_select_contact"
+                    android:padding="@dimen/scale_5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white" />
+
+                <com.carnot.custom_views.AppTextViewMedium
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/scale_4dp"
+                    android:layout_marginTop="@dimen/scale_31dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/lbl_contact_2"
+                    android:textColor="@color/white" />
+
+                <com.carnot.custom_views.AppTextViewLight
+                    android:id="@+id/txt_contact2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/scale_4dp"
+                    android:layout_marginTop="@dimen/scale_5dp"
+                    android:drawableRight="@drawable/ic_nav_arrow_down_white"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_select_contact"
+                    android:padding="@dimen/scale_5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white" />
+
+                <com.carnot.custom_views.AppTextViewMedium
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/scale_4dp"
+                    android:layout_marginTop="@dimen/scale_31dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/lbl_contact_3"
+                    android:textColor="@color/white" />
+
+                <com.carnot.custom_views.AppTextViewLight
+                    android:id="@+id/txt_contact3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/scale_4dp"
+                    android:layout_marginTop="@dimen/scale_5dp"
+                    android:drawableRight="@drawable/ic_nav_arrow_down_white"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_select_contact"
+                    android:padding="@dimen/scale_5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

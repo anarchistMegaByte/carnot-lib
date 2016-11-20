@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string-array name="chart_options">
+        <!--<item>@string/nav_item_home</item>-->
+        <item>@string/graph_item_mileage</item>
+        <item>@string/graph_item_cost</item>
+        <item>@string/graph_item_distance</item>
+        <item>@string/graph_item_duration</item>
+        <item>@string/graph_item_carbon_footpring</item>
+
+        <!--<item>CARBON FOOTPRINT</item>
+        <item>MILEAGE</item>
+        <item>COST</item>
+        <item>DISTANCE</item>
+        <item>DURATION</item>-->
+
+
+    </string-array>
+
+    <string-array name="fuel_types">
+        <item>Petrol</item>
+        <item>Diesel</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="chart_durations">
+        <item>@string/graph_duration_weekly</item>
+        <item>@string/graph_duration_montly</item>
+        <item>@string/graph_duration_yearly</item>
+    </string-array>
+
+    <string-array name="drive_score_chart_durations">
+        <item>@string/graph_duration_weekly</item>
+        <item>@string/graph_duration_montly</item>
+        <item>@string/graph_duration_yearly</item>
+    </string-array>
+
+    <string name="graph_duration_weekly">Weekly</string>
+    <string name="graph_duration_montly">Monthly</string>
+    <string name="graph_duration_yearly">Yearly</string>
+
+    <string name="graph_item_carbon_footpring">EMISSIONS</string>
+    <string name="graph_item_mileage">MILEAGE</string>
+    <string name="graph_item_cost">COST</string>
+    <string name="graph_item_distance">DISTANCE</string>
+    <string name="graph_item_duration">DURATION</string>
+
+
+    <string-array name="gps_messages">
+        <item>I’m searching for GPS signal, It may take up to 10 minutes when Carnot is installed first time.</item>
+        <item>Oops, I’ve lost GPS signal. Searching for satellites. The current location is from GSM which may have some inaccuracy</item>
+    </string-array>
+    <string-array name="am_pm">
+        <item>AM</item>
+        <item>PM</item></string-array>
+</resources>

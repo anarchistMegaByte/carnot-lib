@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/status_black_gradient"
+    android:gravity="center"
+    android:orientation="vertical">
+    <!--
+    <com.carnot.custom_views.AppTextViewMedium
+        android:id="@+id/txt_my_car_says"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="@dimen/scale_16dp"
+        android:layout_marginEnd="@dimen/scale_41dp"
+        android:layout_marginLeft="@dimen/scale_4dp"
+        android:layout_marginStart="@dimen/scale_41dp"
+        android:layout_marginBottom="@dimen/scale_41dp"
+        android:gravity="center_vertical"
+        android:text="sdaad"
+        android:textColor="@color/white"
+        android:textSize="@dimen/scale_15sp" />
+    -->
+    <com.carnot.custom_views.AppTextViewLight
+        android:id="@+id/txt_status_car_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="@dimen/scale_10dp"
+        android:layout_marginEnd="@dimen/scale_41dp"
+        android:layout_marginLeft="@dimen/scale_4dp"
+        android:layout_marginBottom="@dimen/scale_25dp"
+        android:layout_marginStart="@dimen/scale_41dp"
+
+        android:gravity="center_vertical"
+        android:text="Your car says : "
+        android:textColor="@color/white"
+        android:textSize="@dimen/scale_15sp" />
+    <com.carnot.custom_views.AutoResizeTextView
+        android:id="@+id/txt_status_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/scale_30dp"
+        android:layout_marginEnd="@dimen/scale_30dp"
+        android:layout_marginLeft="@dimen/scale_4dp"
+        android:layout_marginStart="@dimen/scale_30dp"
+        android:layout_marginTop="@dimen/scale_30dp"
+        android:gravity="center"
+        android:minLines="4"
+        tools:text="Lorem Ipsum Dollar sit amet,Lorem Ipsum Dollar sit amet,Lorem Ipsum Dollar sit amet,Lorem Ipsum Dollar sit amet,Lorem Ipsum Dollar sit amet,sdlkfjsldkjf slkjd f;lkj sdl;f lsk dflk jsdlfj slkdj flskdjfl;j sd sl;dj flskdjf lj lsdj fl;ksdjf"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+    <com.carnot.custom_views.AppTextViewLight
+        android:id="@+id/txt_status_sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/scale_5dp"
+        android:layout_marginEnd="@dimen/scale_41dp"
+        android:layout_marginLeft="@dimen/scale_4dp"
+        android:layout_marginStart="@dimen/scale_41dp"
+
+        android:gravity="center_vertical"
+        android:text=""
+        android:textColor="@color/green_text_color"
+        android:textSize="@dimen/scale_12sp" />
+
+    <ImageView
+        android:id="@+id/img_close_card_internal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:visibility="gone"
+        android:padding="@dimen/scale_10dp"
+        android:src="@drawable/ic_mainnav_close_white" />
+
+
+</FrameLayout>

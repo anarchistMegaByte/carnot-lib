@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ic_marker_info_window"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.carnot.custom_views.AppTextViewLight
+        android:id="@+id/txt_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        tools:text="65"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_20sp" />
+
+    <com.carnot.custom_views.AppTextViewMedium
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/scale_2dp"
+        android:gravity="center"
+        android:text="KMPH"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_10sp" />
+
+    <com.carnot.custom_views.AppTextViewMedium
+        android:id="@+id/txt_status_on_trip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/scale_4dp"
+        android:background="@drawable/rounded_accent_btn"
+        android:gravity="center"
+        android:paddingLeft="@dimen/scale_10dp"
+        android:paddingTop="@dimen/scale_2dp"
+        android:paddingBottom="@dimen/scale_2dp"
+        android:paddingRight="@dimen/scale_10dp"
+        android:text="On Trip"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_8sp" />
+</LinearLayout>

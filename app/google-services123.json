@@ -1,0 +1,104 @@
+//{
+//  "project_info": {
+//    "project_id": "indigo-shuttle-126813",
+//    "project_number": "162026349873",
+//    "name": "Carnot"
+//  },
+//  "client": [
+//    {
+//      "client_info": {
+//        "mobilesdk_app_id": "1:162026349873:android:be0365c371efb538",
+//        "client_id": "android:com.carnot",
+//        "client_type": 1,
+//        "android_client_info": {
+//          "package_name": "com.carnot",
+//          "certificate_hash": []
+//        }
+//      },
+//      "oauth_client": [
+//        {
+//          "client_id": "162026349873-cjvjt2g1bkpq9udm5b24r36ngt6c09ie.apps.googleusercontent.com",
+//          "client_type": 1,
+//          "android_info": {
+//            "package_name": "com.carnot",
+//            "certificate_hash": "8EE144989F5C504EA757410BD6C0C0C5EE040F04"
+//          }
+//        },
+//        {
+//          "client_id": "162026349873-lni33lg9ku44ke3lea16ah4134j4pujn.apps.googleusercontent.com",
+//          "client_type": 3
+//        }
+//      ],
+//      "api_key": [],
+//      "services": {
+//        "analytics_service": {
+//          "status": 1
+//        },
+//        "cloud_messaging_service": {
+//          "status": 1,
+//          "apns_config": []
+//        },
+//        "appinvite_service": {
+//          "status": 1,
+//          "other_platform_oauth_client": []
+//        },
+//        "google_signin_service": {
+//          "status": 2
+//        },
+//        "ads_service": {
+//          "status": 1
+//        }
+//      }
+//    }
+//  ],
+//  "client_info": [],
+//  "ARTIFACT_VERSION": "1"
+//}
+{
+  "project_info": {
+    "project_number": "162026349873",
+    "project_id": "indigo-shuttle-126813"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162026349873:android:be0365c371efb538",
+        "android_client_info": {
+          "package_name": "com.carnot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "162026349873-cjvjt2g1bkpq9udm5b24r36ngt6c09ie.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.carnot",
+            "certificate_hash": "9FD2A346910EE17E223ED3D8E2304BB5F9A30C40"
+          }
+        },
+        {
+          "client_id": "162026349873-lni33lg9ku44ke3lea16ah4134j4pujn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG3y_SgBNHCQdj0rH1DtKn6EUK2Daa-nQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

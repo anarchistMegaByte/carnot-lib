@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/scale_10dp"
+    android:layout_marginRight="@dimen/scale_10dp"
+    android:orientation="vertical"
+    cardView:cardCornerRadius="@dimen/scale_0dp"
+    cardView:cardElevation="@dimen/scale_3dp"
+    cardView:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:padding="@dimen/scale_10dp">
+
+                <com.carnot.custom_views.AppTextViewMedium
+                    android:id="@+id/txt_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2:18 pm, 13th dec 2016"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white" />
+
+                <com.carnot.custom_views.AppTextViewLight
+                    android:id="@+id/txt_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" | powai - Andheri"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_10sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center_vertical|right"
+                android:src="@drawable/ic_nav_back_purple_right" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/scale_1dp"
+                android:layout_weight="1"
+                android:background="@color/carnot_list_background"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/scale_16dp"
+                android:paddingTop="@dimen/scale_16dp">
+
+
+                <com.carnot.custom_views.DriveScoreView
+                    android:id="@+id/drive_score_view"
+                    android:layout_width="@dimen/scale_24dp"
+                    android:layout_height="@dimen/scale_24dp"
+                    android:layout_gravity="center_horizontal"
+                    app:primary_color="#ff00ff"
+                    app:score="75"
+                    app:secondary_color="#88000000" />
+
+                <com.carnot.custom_views.AppTextViewLight
+                    android:id="@+id/txt_drive_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/scale_10dp"
+                    android:gravity="center"
+                    android:text="12.6"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_24sp" />
+
+                <com.carnot.custom_views.AppTextViewLight
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/scale_5dp"
+                    android:gravity="center"
+                    android:text="@string/lbl_drive_score"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_12sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/scale_1dp"
+                android:layout_weight="1"
+                android:background="@color/carnot_list_background"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/scale_16dp"
+                android:paddingTop="@dimen/scale_16dp">
+
+
+                <com.carnot.custom_views.MileageView
+                    android:id="@+id/mileage_view"
+                    android:layout_width="@dimen/scale_80dp"
+                    android:layout_height="@dimen/scale_8dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    app:primary_color="#ff00ff"
+                    app:score="75"
+                    app:secondary_color="#88000000" />
+
+                <com.carnot.custom_views.AppTextViewLight
+                    android:id="@+id/txt_mileage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/scale_10dp"
+                    android:gravity="center"
+                    android:text="12.6"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_24sp" />
+
+                <com.carnot.custom_views.AppTextViewLight
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/scale_5dp"
+                    android:gravity="center"
+                    android:text="@string/lbl_mileage"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_12sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/carnot_list_background"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/scale_16dp"
+                android:paddingTop="@dimen/scale_16dp">
+
+
+                <ImageView
+                    android:id="@+id/img_photo"
+                    android:layout_width="@dimen/scale_48dp"
+                    android:layout_height="@dimen/scale_48dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/circle_black"
+                    android:padding="@dimen/scale_2dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/img_caronmap_small" />
+
+                <com.carnot.custom_views.AppTextViewLight
+                    android:id="@+id/txt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/scale_10dp"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Swift 2016"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

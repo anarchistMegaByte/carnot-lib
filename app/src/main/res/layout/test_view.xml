@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/scale_16dp">
+
+    <ImageView
+        android:id="@+id/iv_badge"
+        android:layout_width="@dimen/scale_72dp"
+        android:layout_height="@dimen/scale_72dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_badge_hrs" />
+
+    <com.carnot.custom_views.DriveScoreView
+        android:id="@+id/drive_score_view"
+        android:layout_width="@dimen/scale_72dp"
+        android:layout_height="@dimen/scale_72dp"
+        android:layout_gravity="center"
+        app:primary_color="@color/transparent"
+        app:score="25"
+        app:secondary_color="#88000000" />
+</FrameLayout>

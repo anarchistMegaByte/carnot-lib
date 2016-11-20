@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:contentDescription="Badge Header "
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/scale_16dp">
+
+
+
+    </FrameLayout>
+
+    <com.carnot.custom_views.AppTextViewLight
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/scale_5dp"
+        android:gravity="center"
+        android:text="Rocketeer"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_12sp" />
+
+    <com.carnot.custom_views.AppTextViewMedium
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/scale_17dp"
+        android:gravity="center"
+        android:text="Almost there!"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_24sp" />
+
+    <com.carnot.custom_views.AppTextViewLight
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/scale_10dp"
+        android:layout_marginTop="@dimen/scale_9dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/scale_5dp"
+        android:paddingRight="@dimen/scale_5dp"
+        android:text="@string/lbl_badge_reward_info"
+        android:textColor="@color/white" />
+
+    <com.carnot.custom_views.AppTextViewLight
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/scale_20dp"
+        android:layout_marginTop="@dimen/scale_9dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/scale_5dp"
+        android:paddingRight="@dimen/scale_5dp"
+        android:text="25th march 2016"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

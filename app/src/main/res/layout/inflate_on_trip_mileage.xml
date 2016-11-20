@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/scale_240dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!--
+    <com.ontripactivity.AppTextViewMedium
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Mileage"
+        android:textAllCaps="true"
+        android:textColor="@color/white" />
+        -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scale_220dp">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/linechart_mileage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="@dimen/scale_72dp"
+            android:layout_height="@dimen/scale_72dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_status_translucent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.carnot.custom_views.AppTextViewLight
+                android:id="@+id/avg_mileage_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_24sp" />
+
+            <com.carnot.custom_views.AppTextViewLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scale_5dp"
+                android:gravity="center"
+                android:text="KMPL"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_8sp" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

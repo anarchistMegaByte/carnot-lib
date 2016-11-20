@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cardView="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_light_transparent"
+    android:fitsSystemWindows="true">
+
+    <!--<android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapse_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/black_light_transparent"
+            app:expandedTitleGravity="center_horizontal|top"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                android:contentInsetEnd="0dp"
+                android:contentInsetStart="0dp"
+                android:elevation="4dp"
+                android:titleTextAppearance="@android:color/transparent"
+                app:contentInsetLeft="0dp"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+
+                />
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>-->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways" />
+
+            <com.carnot.custom_views.AppTextViewMedium
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scale_58dp"
+                android:layout_marginLeft="@dimen/scale_16dp"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:text="@string/lbl_document"
+                android:textColor="@color/white"
+                app:textAllCaps="true" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_document"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/scale_16dp"
+                android:layout_marginRight="@dimen/scale_16dp"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/scale_10dp" />
+
+            <com.carnot.custom_views.AppTextViewMedium
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/scale_16dp"
+                android:layout_marginLeft="@dimen/scale_16dp"
+                android:layout_marginRight="@dimen/scale_16dp"
+                android:layout_marginTop="@dimen/scale_29dp"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:text="@string/lbl_service_history"
+                android:textAllCaps="true"
+                android:textColor="@color/white" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_service_history"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/scale_16dp"
+                android:layout_marginRight="@dimen/scale_16dp"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/scale_10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.carnot.custom_views.AppTextViewLight
+        android:id="@+id/lbl_empty_certificate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/lbl_empty_msg_car_passport"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_nav_plus_white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/black_light_transparent"
+        android:clipToPadding="true"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scale_196dp"
+            android:layout_gravity="bottom"
+            cardView:cardBackgroundColor="@color/transparent"
+            cardView:cardCornerRadius="@dimen/scale_1dp"
+            cardView:cardElevation="@dimen/scale_10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.carnot.custom_views.AppTextViewMedium
+                    android:id="@+id/tv_title_document"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/scale_60dp"
+                    android:layout_gravity="left"
+                    android:gravity="left|center_vertical"
+
+                    android:paddingLeft="@dimen/scale_16dp"
+                    android:text="@string/lbl_select_document_type"
+                    android:textColor="@color/white" />
+
+                <com.carnot.custom_views.AppTextViewLight
+                    android:id="@+id/tv_action_registration_certificate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/scale_48dp"
+                    android:layout_gravity="left"
+                    android:background="@drawable/linear_background_lightblack"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="@dimen/scale_16dp"
+                    android:text="@string/lbl_registration_certificate"
+                    android:textColor="@color/white" />
+
+                <com.carnot.custom_views.AppTextViewLight
+                    android:id="@+id/tv_action_puc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/scale_48dp"
+                    android:layout_gravity="left"
+                    android:background="@drawable/linear_background_lightblack"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="@dimen/scale_16dp"
+                    android:text="@string/lbl_puc"
+                    android:textColor="@color/white" />
+
+                <com.carnot.custom_views.AppTextViewLight
+                    android:id="@+id/tv_action_insurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/scale_48dp"
+                    android:layout_gravity="left"
+                    android:background="@drawable/linear_background_lightblack"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="@dimen/scale_16dp"
+                    android:text="@string/lbl_insurance"
+                    android:textColor="@color/white" />
+
+                <com.carnot.custom_views.AppTextViewLight
+                    android:id="@+id/tv_action_derive_licence"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/scale_48dp"
+                    android:layout_gravity="left"
+                    android:background="@drawable/linear_background_lightblack"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="@dimen/scale_16dp"
+                    android:text="@string/lbl_Driver_License"
+                    android:textColor="@color/white" />
+
+                <com.carnot.custom_views.AppTextViewLight
+                    android:id="@+id/tv_action_service_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/scale_48dp"
+                    android:layout_gravity="left"
+                    android:background="@drawable/linear_background_lightblack"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="@dimen/scale_16dp"
+                    android:text="@string/lbl_service_details"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_light_transparent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--<android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:contentInsetEnd="0dp"
+        android:contentInsetStart="0dp"
+        android:elevation="4dp"
+        android:titleTextAppearance="@android:color/transparent"
+        app:contentInsetLeft="0dp"
+        app:layout_collapseMode="pin"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginTop="13dp"
+
+        />-->
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.carnot.custom_views.EditableLinearLayout
+            android:id="@+id/editable_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scale_240dp"
+                android:background="@drawable/img_white_transparent"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+
+                <ImageView
+                    android:id="@+id/ivCarPic"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/scale_240dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_no_image" />
+
+                <ProgressBar
+                    android:id="@+id/progress_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/ivCamera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:paddingBottom="@dimen/scale_16dp"
+                    android:paddingRight="@dimen/scale_16dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_camera_white" />
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/scale_16dp"
+                android:layout_marginRight="@dimen/scale_16dp"
+                android:layout_marginTop="@dimen/scale_16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_car_placeholder" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/scale_16dp"
+                    android:orientation="vertical">
+
+                    <com.carnot.custom_views.AppTextViewMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/scale_4dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/lbl_nickname"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_10sp" />
+
+                    <com.carnot.custom_views.AppEditTextLight
+                        android:id="@+id/edt_nickname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hint_name_your_car"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_12sp" />
+
+                    <com.carnot.custom_views.AppTextViewMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/scale_4dp"
+                        android:layout_marginTop="@dimen/scale_31dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/lbl_registration_number"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_10sp" />
+
+                    <com.carnot.custom_views.AppEditTextLight
+                        android:id="@+id/edt_license_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hint_enter_license_no_hint"
+                        android:inputType="textCapCharacters|textNoSuggestions"
+                        android:maxLength="13"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_12sp" />
+
+
+                    <!--app:mask="##-##-##-####"
+                    app:mask_fill="_"-->
+
+                    <com.carnot.custom_views.AppTextViewMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/scale_4dp"
+                        android:layout_marginTop="@dimen/scale_20dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/lbl_make"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_10sp" />
+
+                    <com.carnot.custom_views.AppTextViewMedium
+                        android:id="@+id/lbl_brand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/scale_5dp"
+                        android:drawableRight="@drawable/ic_nav_arrow_down_white"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/scale_5dp"
+                        android:text="Hyundai"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_15sp" />
+
+                    <com.carnot.custom_views.AppTextViewMedium
+                        android:id="@+id/lbl_model"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/scale_5dp"
+                        android:drawableRight="@drawable/ic_nav_arrow_down_white"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/scale_5dp"
+                        android:text="Grand i10"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_15sp" />
+
+                    <Spinner
+                        android:id="@+id/edt_brand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-5dp"
+                        android:layout_marginTop="@dimen/scale_5dp"
+                        android:drawableRight="@drawable/ic_nav_arrow_down_white"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hint_brand"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_12sp"
+                        android:visibility="gone" />
+
+                    <Spinner
+                        android:id="@+id/edt_model"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-5dp"
+                        android:layout_marginTop="@dimen/scale_10dp"
+                        android:drawableRight="@drawable/ic_nav_arrow_down_white"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hint_model"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_12sp"
+                        android:visibility="gone" />
+
+                    <RadioGroup
+                        android:id="@+id/radio_group_fuel_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/scale_10dp"
+                        android:orientation="horizontal">
+
+                        <com.carnot.custom_views.AppRadioButtom
+                            android:id="@+id/radio_petrol"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:gravity="center_vertical"
+                            android:text="@string/lbl_petrol" />
+
+                        <com.carnot.custom_views.AppRadioButtom
+                            android:id="@+id/radio_diesel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/lbl_diesel" />
+
+                        <com.carnot.custom_views.AppRadioButtom
+                            android:id="@+id/radio_other"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/lbl_other" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/scale_10dp"
+                        android:layout_marginLeft="@dimen/scale_4dp"
+                        android:orientation="horizontal">
+
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/lbl_show_short_trips"
+                            android:textColor="@color/white" />
+
+                        <CheckBox
+                            android:id="@+id/chk_show_short_trips"
+                            android:layout_width="@dimen/scale_45dp"
+                            android:layout_height="@dimen/scale_45dp"
+                            android:button="@drawable/switch_selector"
+                            android:checked="false" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.carnot.custom_views.EditableLinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

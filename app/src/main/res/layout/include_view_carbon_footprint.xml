@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/scale_5dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/view_grey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scale_10dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="0.5dp"
+                android:background="@color/divider_grey_color" />
+
+            <FrameLayout
+                android:id="@+id/frm_progress"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content">
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/scale_10dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="0.5dp"
+                    android:background="@color/white" />
+
+                <ImageView
+                    android:id="@+id/img_car"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="@dimen/scale_4dp"
+                    android:src="@drawable/img_caronmap_small_69" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <com.carnot.custom_views.AppTextViewMedium
+            android:id="@+id/txt_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/scale_4dp"
+            android:layout_marginRight="@dimen/scale_4dp"
+            android:gravity="bottom"
+            android:text="3000kg"
+
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_8sp" />
+    </LinearLayout>
+
+    <com.carnot.custom_views.AppTextViewLight
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Cars"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_12sp" />
+</RelativeLayout>

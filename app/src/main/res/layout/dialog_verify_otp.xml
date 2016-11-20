@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/scale_5dp"
+        android:src="@drawable/ic_arrow_back" />
+
+    <com.carnot.custom_views.AppTextViewMedium
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/scale_32dp"
+        android:layout_marginRight="@dimen/scale_32dp"
+        android:layout_marginTop="@dimen/scale_10dp"
+        android:text="@string/lbl_enter_otp_code"
+        android:textColor="@color/white" />
+
+    <com.carnot.custom_views.AppEditTextMedium
+        android:id="@+id/edt_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/scale_32dp"
+        android:layout_marginRight="@dimen/scale_32dp"
+        android:layout_marginTop="@dimen/scale_10dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="6"
+        android:padding="@dimen/scale_10dp"
+        android:textColor="@color/black"
+        tools:text="123456" />
+
+    <com.carnot.custom_views.AppButton
+        android:id="@+id/btn_verify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/scale_32dp"
+        android:layout_marginRight="@dimen/scale_32dp"
+        android:layout_marginTop="@dimen/scale_10dp"
+        android:text="@string/lbl_verify" />
+
+    <com.carnot.custom_views.AppTextViewMedium
+        android:id="@+id/txt_error_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/scale_16dp"
+        android:layout_marginLeft="@dimen/scale_32dp"
+        android:layout_marginRight="@dimen/scale_32dp"
+        android:layout_marginTop="@dimen/scale_10dp"
+        android:text="@string/lbl_incorrect_code_try_again"
+        android:textColor="@color/red"
+        android:visibility="invisible" />
+</LinearLayout>

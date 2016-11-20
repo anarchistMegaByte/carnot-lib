@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+<FrameLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="@dimen/scale_20dp"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical">
+-->
+<com.carnot.custom_views.AppTextViewLight xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lbl_error_code"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/scale_25dp"
+    android:layout_gravity="center"
+    android:layout_marginBottom="@dimen/scale_10dp"
+    android:drawableLeft="@drawable/ic_info_purple_small"
+    android:drawablePadding="@dimen/scale_8dp"
+    android:gravity="center"
+    android:text="@string/lbl_P0729"
+    android:textColor="@color/white" />
+
+    <!--
+    </FrameLayout>
+    -->
+

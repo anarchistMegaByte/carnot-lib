@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#111111</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#7933FF</color>
+    <color name="colorAccentDark">#481e99</color>
+    <color name="colorAccentLight">#607933FF</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="yellow">#F9A937</color>
+
+    <color name="translucent">#80000000</color>
+
+    <color name="white_light">#50ffffff</color>
+    <color name="googlePlusColor">#D44837</color>
+    <color name="googlePlusColorDar">#943226</color>
+    <color name="facebookColor">#3B5999</color>
+    <color name="facebookColorDar">#293e6b</color>
+    <color name="divider_grey_color">#4B4B4B</color>
+    <color name="dialog_background_color">#333333</color>
+
+    <color name="red">#E64645</color>
+    <color name="red_translucent">#80E64645</color>
+    <color name="status_red_start_color">#C62626</color>
+    <color name="status_red_end_color">#FF5652</color>
+
+    <color name="status_green_start_color">#22DF8E</color>
+    <color name="status_green_end_color">#1E986D</color>
+
+    <color name="progress_start_color">#17D994</color>
+    <color name="progress_end_color">#00976E</color>
+
+    <color name="green_secondary_color">#00976D</color>
+
+    <color name="green_text_color">#22B974</color>
+    <color name="status_black_start_color">#333333</color>
+    <color name="status_black_end_color">#111111</color>
+
+    <color name="rippelColor">#0099CC</color>
+
+    <!--added by javid-->
+    <color name="setting_box">#353535</color>
+    <color name="carnot_list_background">#222222</color>
+    <color name="carnot_list_row_background">#333333</color>
+    <color name="black_light_transparent">#272727</color>
+    <color name="black_tyrepressur_bg">#181818</color>
+    <color name="black_translucent">#80000000</color>
+    <color name="dark_white">#F9F9F9</color>
+
+    <color name="service_history_row_background">#363636</color>
+
+
+    <!--NEW-->
+    <color name="dark_gray">#222222</color>
+
+    <color name="light_gray">#898989</color>
+    <color name="purple">#7933FF</color>
+
+    <color name="grid_line">#aa000000</color>
+
+
+    <!-- Custom Seekbar -->
+    <color name="dsb_progress_color">#686868</color>
+    <color name="dsb_track_color">#686868</color>
+    <color name="dsb_disabled_color">#686868</color>
+    <color name="dsb_ripple_color_pressed">@color/colorAccent</color>
+    <color name="dsb_ripple_color_focused">@color/colorAccent</color>
+    <color name="disc_shadow_border">#bbbaba</color>
+    <!-- EXTRA -->
+    <color name="dsc_indicator_color">@color/colorAccent</color>
+
+    <color name="app_green_light">#1CE88B</color>
+    <color name="app_green_dark">#19986b</color>
+    <color name="app_red_light">#ff5652</color>
+    <color name="app_red_dark">#b72525</color>
+    <color name="app_yello_light">#ffcc33</color>
+    <color name="app_yello_dark">#f9a935</color>
+
+</resources>

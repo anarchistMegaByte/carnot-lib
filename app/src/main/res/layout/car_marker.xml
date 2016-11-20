@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_sync_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_security_location"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_location_purple" />
+
+    <LinearLayout
+        android:id="@+id/info_window"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_marker_info_window"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.carnot.custom_views.AppTextViewLight
+            android:id="@+id/txt_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_20sp"
+            tools:text="65" />
+
+        <com.carnot.custom_views.AppTextViewMedium
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/scale_2dp"
+            android:gravity="center"
+            android:text="KMPH"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_10sp" />
+
+        <com.carnot.custom_views.AppTextViewMedium
+            android:id="@+id/txt_status_on_trip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/scale_4dp"
+            android:background="@drawable/rounded_accent_btn"
+            android:gravity="center"
+            android:paddingBottom="@dimen/scale_2dp"
+            android:paddingLeft="@dimen/scale_10dp"
+            android:paddingRight="@dimen/scale_10dp"
+            android:paddingTop="@dimen/scale_2dp"
+            android:text="On Trip"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_8sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/scale_2dp"
+        android:layout_marginTop="@dimen/scale_2dp"
+        android:src="@drawable/img_car_on_map_small_marker" />
+
+    <TextView
+        android:id="@+id/txt_marker_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="@dimen/scale_2dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/textsize_10sp"
+        tools:text="Audi 123" />
+
+    <TextView
+        android:id="@+id/txt_sync_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/red"
+        android:textSize="@dimen/textsize_10sp"
+        android:textStyle="bold"
+        tools:text="Audi 123" />
+</LinearLayout>

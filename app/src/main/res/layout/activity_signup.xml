@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/scale_16dp"
+                android:layout_marginRight="@dimen/scale_16dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingBottom="@dimen/scale_10dp"
+                android:scrollbars="none">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/scale_32dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <FrameLayout
+                            android:id="@+id/frm_google_login"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/scale_48dp"
+                            android:layout_marginRight="@dimen/scale_4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/google_plus_background"
+                            android:clickable="true">
+                            <!--Google plus button-->
+                            <!--<com.google.android.gms.common.SignInButton
+                                android:id="@+id/sign_in_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone" />-->
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_google_plus" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/frm_facebook_login"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/scale_48dp"
+                            android:layout_marginLeft="@dimen/scale_4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/facebook_background"
+                            android:clickable="true">
+                            <!--Facebook login button-->
+                            <!--<com.facebook.login.widget.LoginButton
+                                android:id="@+id/login_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:visibility="gone" />-->
+
+                            <ImageView
+                                android:id="@+id/btn_facebook_login"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_facebook" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/scale_36dp"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/divider_height"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/scale_5dp"
+                            android:layout_marginRight="@dimen/scale_5dp"
+                            android:text="@string/lbl_or" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/divider_height"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:background="@color/black" />
+                    </LinearLayout>
+
+                    <com.carnot.custom_views.AppTextViewMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/scale_4dp"
+                        android:layout_marginTop="@dimen/scale_31dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/lbl_name"
+                        android:textColor="@color/white" />
+
+                    <com.carnot.custom_views.AppEditTextLight
+                        android:id="@+id/edt_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:hint="@string/lbl_enter_your_full_name"
+                        android:inputType="textNoSuggestions"
+                        android:singleLine="true"
+                        android:textColor="@color/white" />
+
+                    <com.carnot.custom_views.AppTextViewMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/scale_4dp"
+                        android:layout_marginTop="@dimen/scale_31dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/lbl_phone"
+                        android:textColor="@color/white" />
+
+                    <com.carnot.custom_views.AppEditTextLight
+                        android:id="@+id/edt_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:hint="@string/lbl_enter_phone"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textColor="@color/white" />
+
+                    <com.carnot.custom_views.AppTextViewMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/scale_4dp"
+                        android:layout_marginTop="@dimen/scale_31dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/lbl_email_id"
+                        android:textColor="@color/white" />
+
+                    <com.carnot.custom_views.AppEditTextLight
+                        android:id="@+id/edt_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:hint="@string/lbl_enter_email_id"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:textColor="@color/white" />
+
+                    <com.carnot.custom_views.AppTextViewMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/scale_4dp"
+                        android:layout_marginTop="@dimen/scale_31dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/lbl_password"
+                        android:textColor="@color/white" />
+
+                    <com.carnot.custom_views.AppEditTextLight
+                        android:id="@+id/edt_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:hint="@string/lbl_password_hint"
+                        android:inputType="textNoSuggestions|textPassword"
+                        android:singleLine="true"
+                        android:textColor="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/scale_31dp"
+                        android:gravity="center_vertical">
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/cb_box"
+                            android:buttonTint="@color/purple"
+                            android:text="">
+                        </CheckBox>
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/scale_4dp"
+                            android:gravity="center_vertical"
+                            android:text="Hi"
+                            android:id="@+id/TAndC"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <com.carnot.custom_views.AppButton
+                        android:id="@+id/btn_sign_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/scale_48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/scale_24dp"
+                        android:singleLine="true"
+                        android:text="@string/lbl_signup"
+                        android:textColor="@color/white" />
+
+                    <com.carnot.custom_views.AppTextViewMedium
+                        android:id="@+id/txt_sign_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/scale_12dp"
+                        android:gravity="center"
+                        android:padding="@dimen/scale_10dp"
+                        android:singleLine="true"
+                        android:text="@string/lbl_sign_in"
+                        android:textColor="@color/colorAccent" />
+
+                </LinearLayout>
+            </ScrollView>
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="@style/AppProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+    </ScrollView>
+</LinearLayout>

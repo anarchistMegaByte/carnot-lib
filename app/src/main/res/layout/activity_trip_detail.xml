@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dialog_background_color"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <include
+                layout="@layout/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top" />
+            <!--app:layout_scrollFlags="scroll|enterAlways|snap"-->
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/scale_16dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rel_main_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:contentDescription="Maps">
+
+
+                    <LinearLayout
+                        android:id="@+id/TripInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/scale_10dp">
+
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:id="@+id/txt_date_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            tools:text="2:18 pm, 13th dec 2016" />
+
+                        <com.carnot.custom_views.AppTextViewLight
+                            android:id="@+id/txt_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_10sp"
+                            android:textStyle="normal"
+                            tools:text=" | powai - Andherilskdlkdj lksjdlfk lksjdf" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_below="@id/TripInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/scale_168dp">
+
+                        <fragment
+                            android:id="@+id/map"
+                            android:name="com.carnot.custom_views.TouchableSupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar_map"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/ll_distance_trip_speed">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/scale_32dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/ll_drive_score"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/scale_112dp"
+                                android:layout_marginRight="@dimen/scale_1dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.carnot.custom_views.DriveScoreView
+                                    android:id="@+id/drive_score_view"
+                                    android:layout_width="@dimen/scale_24dp"
+                                    android:layout_height="@dimen/scale_24dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/scale_5dp"
+                                    android:layout_marginTop="@dimen/scale_2dp"
+                                    app:enable_color_scheme="false"
+                                    app:primary_color="@color/white"
+                                    app:score="50"
+                                    app:secondary_color="#543096" />
+
+                                <com.carnot.custom_views.AppTextViewLight
+                                    android:id="@+id/txt_drive_score"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/scale_7dp"
+                                    android:gravity="center"
+                                    android:text="75"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_24sp"
+                                    android:transitionName="@string/transition_txt_drive_score" />
+
+                                <com.carnot.custom_views.AppTextViewLight
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/scale_5dp"
+                                    android:gravity="center"
+                                    android:text="@string/lbl_drive_score"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_10sp"
+                                    android:transitionName="@string/transition_lbl_drive_score" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_mileage"
+                                android:layout_width="match_parent"
+                                android:layout_height="112dp"
+                                android:layout_marginRight="@dimen/scale_1dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.carnot.custom_views.MileageView
+                                    android:id="@+id/mileage_view"
+                                    android:layout_width="@dimen/scale_110dp"
+                                    android:layout_height="@dimen/scale_8dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/scale_5dp"
+                                    android:layout_marginTop="@dimen/scale_5dp"
+                                    app:enable_color_scheme="false"
+                                    app:primary_color="@color/white"
+                                    app:score="20"
+                                    app:secondary_color="#543096" />
+
+                                <com.carnot.custom_views.AppTextViewLight
+                                    android:id="@+id/txt_mileage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/scale_14dp"
+                                    android:gravity="center"
+                                    android:text="12.6"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_24sp" />
+
+                                <com.carnot.custom_views.AppTextViewLight
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/scale_5dp"
+                                    android:gravity="center"
+                                    android:text="@string/lbl_mileage"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_10sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/img_photo"
+                            android:layout_width="@dimen/scale_64dp"
+                            android:layout_height="@dimen/scale_64dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/ic_profile_circle_black" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@id/ll_distance_trip_speed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:contentDescription="Milage Trips"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_carbon_footprint"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/scale_56dp"
+                            android:layout_marginRight="@dimen/scale_1dp"
+                            android:layout_weight="1"
+                            android:background="@color/carnot_list_background"
+                            android:contentDescription="Milage Trips"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.carnot.custom_views.AppTextViewLight
+                                android:id="@+id/txt_distance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_24sp"
+                                tools:text="1.05" />
+
+                            <com.carnot.custom_views.AppTextViewLight
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/scale_4dp"
+                                android:gravity="center"
+                                android:text="@string/lbl_distance_in_km"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_8sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_distance"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/scale_1dp"
+                            android:layout_weight="1"
+                            android:background="@color/carnot_list_background"
+                            android:contentDescription="Milage Trips"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.carnot.custom_views.AppTextViewLight
+                                android:id="@+id/txt_trip_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_24sp"
+                                tools:text="1.02" />
+
+                            <com.carnot.custom_views.AppTextViewLight
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/scale_4dp"
+                                android:gravity="center"
+                                android:text="@string/lbl_trip_in_hrs"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_8sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_trip_hr"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/carnot_list_background"
+                            android:contentDescription="Milage Trips"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.carnot.custom_views.AppTextViewLight
+                                android:id="@+id/txt_avg_speed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_24sp"
+                                tools:text="65" />
+
+                            <com.carnot.custom_views.AppTextViewLight
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/scale_4dp"
+                                android:gravity="center"
+                                android:text="@string/lbl_avg_speed"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_8sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/frm_child_past_trip_highlights"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Past Trip and Highlights"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/include_drive_score_trip_detail" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+</FrameLayout>

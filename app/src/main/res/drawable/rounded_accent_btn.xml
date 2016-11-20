@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+        <item android:drawable="@drawable/ic_selected_purple_small" android:state_checked="true" android:state_window_focused="false" />
+        <item android:drawable="@drawable/circle_black" android:state_checked="false" android:state_window_focused="false" />
+
+        <item android:drawable="@drawable/circle_black" android:state_checked="false" />
+        <item android:drawable="@drawable/ic_selected_purple_small" android:state_checked="true" />-->
+
+    <item>
+        <shape android:shape="rectangle">
+            <corners
+                android:bottomLeftRadius="@dimen/scale_10dp"
+                android:bottomRightRadius="@dimen/scale_10dp"
+                android:topLeftRadius="@dimen/scale_10dp"
+                android:topRightRadius="@dimen/scale_10dp" />
+            <solid android:color="@color/colorAccent" />
+
+        </shape>
+    </item>
+
+    <!-- <item
+         android:drawable="@drawable/ic_selected_purple_small"
+         android:state_pressed="true"
+         android:state_selected="true"></item>
+     <item
+         android:drawable="@drawable/ic_selected_purple_small"
+         android:state_pressed="false"
+         android:state_selected="true"></item>
+     <item
+         android:drawable="@drawable/circle_black"
+         android:state_pressed="false"
+         android:state_selected="false"></item>
+     <item android:drawable="@drawable/circle_black"></item>-->
+</layer-list>

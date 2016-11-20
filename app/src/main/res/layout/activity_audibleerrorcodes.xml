@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/carnot_list_row_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <com.carnot.custom_views.AppTextViewMedium
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scale_48dp"
+        android:layout_marginLeft="@dimen/scale_16dp"
+        android:layout_marginTop="@dimen/scale_16dp"
+        android:gravity="center_vertical"
+        android:text="@string/lbl_audible_title"
+        android:textColor="@color/white" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/scale_16dp"
+            android:layout_marginRight="@dimen/scale_16dp"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/scale_10dp" />
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

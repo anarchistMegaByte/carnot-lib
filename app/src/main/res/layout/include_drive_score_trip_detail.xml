@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/trip_detail_main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.carnot.custom_views.AppTextViewMedium
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/scale_13dp"
+        android:layout_marginLeft="@dimen/scale_16dp"
+        android:layout_marginRight="@dimen/scale_16dp"
+        android:layout_marginTop="@dimen/scale_29dp"
+        android:text="@string/lbl_drive_score"
+        android:textAllCaps="true"
+        android:textColor="@color/white" />
+
+    <!--<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/scale_16dp"
+        android:layout_marginRight="@dimen/scale_16dp"
+        android:background="@color/carnot_list_background">-->
+
+    <com.carnot.custom_views.DriverScoreViewProgressBar
+        android:id="@+id/driver_score_view_progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/scale_16dp"
+        android:layout_marginRight="@dimen/scale_16dp"
+        app:enable_color_scheme="true" />
+
+    <!--<include layout="@layout/drive_score_progress_view" />-->
+
+    <!--</FrameLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/scale_16dp"
+        android:layout_marginRight="@dimen/scale_16dp"
+        android:orientation="vertical">
+
+        <com.carnot.custom_views.CounterAppTextViewMedium
+            android:id="@+id/counter_txt_overspeeding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_gray"
+            app:text="@string/lbl_overspeeding" />
+
+        <com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandable_overspeeding"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scale_208dp"
+            android:contentDescription="Idling"
+            app:ael_expanded="false">
+
+            <fragment
+                android:id="@+id/map_overspeeding"
+                android:name="com.carnot.custom_views.TouchableSupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Maps" />
+
+        </com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout>
+
+        <com.carnot.custom_views.CounterAppTextViewMedium
+            android:id="@+id/counter_txt_hard_acc_brake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/scale_1dp"
+            android:background="@color/dark_gray"
+            app:text="@string/lbl_hard_acceleration_brak" />
+
+        <com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandable_hard_acc_brake"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scale_208dp"
+            android:contentDescription="hard acc brake"
+            app:ael_expanded="false">
+
+            <fragment
+                android:id="@+id/map_hard_acc_brake"
+                android:name="com.carnot.custom_views.TouchableSupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Maps" />
+
+        </com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout>
+
+        <com.carnot.custom_views.CounterAppTextViewMedium
+            android:id="@+id/counter_txt_eco_driving"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/scale_1dp"
+            android:background="@color/dark_gray"
+            app:text="@string/lbl_eco_driving" />
+
+        <com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandable_eco_driving"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scale_208dp"
+            android:contentDescription="eco driving"
+            app:ael_expanded="false">
+
+            <fragment
+                android:id="@+id/map_eco_driving"
+                android:name="com.carnot.custom_views.TouchableSupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Maps" />
+
+        </com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout>
+
+
+        <com.carnot.custom_views.CounterAppTextViewMedium
+            android:id="@+id/counter_txt_idling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/scale_1dp"
+            android:background="@color/dark_gray"
+            app:text="@string/lbl_idling" />
+
+        <com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandable_idling"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scale_208dp"
+            android:contentDescription="Idling"
+            app:ael_expanded="false">
+
+            <fragment
+                android:id="@+id/map_idle"
+                android:name="com.carnot.custom_views.TouchableSupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Maps" />
+
+        </com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout>
+
+
+        <com.carnot.custom_views.CounterAppTextViewMedium
+            android:id="@+id/counter_txt_good_gear_change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/scale_1dp"
+            android:background="@color/dark_gray"
+            app:text="@string/lbl_good_gear_change" />
+
+        <com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandable_good_gear_change"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scale_208dp"
+            android:contentDescription="Idling"
+            app:ael_expanded="false">
+
+            <fragment
+                android:id="@+id/map_good_gear_change"
+                android:name="com.carnot.custom_views.TouchableSupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Maps" />
+
+        </com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/scale_13dp"
+            android:layout_marginLeft="@dimen/scale_16dp"
+            android:layout_marginRight="@dimen/scale_16dp"
+            android:layout_marginTop="@dimen/scale_29dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.carnot.custom_views.AppTextViewMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_mileage"
+                android:textAllCaps="true"
+                android:textColor="@color/white" />
+
+            <com.carnot.custom_views.AppTextViewMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="| 2:04PM - 3.15PM"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_10sp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scale_208dp"
+            android:layout_marginLeft="@dimen/scale_16dp"
+            android:layout_marginRight="@dimen/scale_16dp"
+            android:background="@color/carnot_list_background">
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barchart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="@dimen/scale_72dp"
+                android:layout_height="@dimen/scale_72dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_status_translucent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.carnot.custom_views.AppTextViewLight
+                    android:id="@+id/avg_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="15"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_24sp" />
+
+                <com.carnot.custom_views.AppTextViewLight
+                    android:id="@+id/avg_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/scale_5dp"
+                    android:gravity="center"
+                    android:text="@string/lbl_kmpl"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_8sp" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/graph_progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

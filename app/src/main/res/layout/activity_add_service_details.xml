@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/black_light_transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scale_4dp"
+                android:background="@color/black"></View>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scale_240dp"
+                android:background="@drawable/img_white_transparent"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+
+                <ImageView
+                    android:id="@+id/img_certificate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/scale_240dp"
+                    android:layout_gravity="center"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_pancard" />
+
+                <ImageView
+                    android:id="@+id/img_camera_capture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:padding="@dimen/scale_16dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_camera_white" />
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="@color/transparent"
+                android:orientation="vertical"
+
+                android:paddingLeft="@dimen/scale_16dp"
+                android:paddingRight="@dimen/scale_16dp"
+
+                >
+
+
+                <com.carnot.custom_views.AppTextViewMedium
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/scale_4dp"
+                    android:layout_marginTop="@dimen/scale_31dp"
+
+                    android:gravity="center_vertical"
+                    android:text="@string/lbl_name_service_centre"
+                    android:textColor="@color/white" />
+
+                <com.carnot.custom_views.AppEditTextLight
+                    android:id="@+id/edt_service_center_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_type_name_of_service_centre"
+                    android:singleLine="true"
+                    android:textColor="@color/white" />
+
+                <!--android:drawableRight="@drawable/ic_nav_arrow_down_white"-->
+
+                <com.carnot.custom_views.AppTextViewMedium
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/scale_4dp"
+                    android:layout_marginTop="@dimen/scale_31dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/lbl_date_of_service"
+                    android:textColor="@color/white" />
+
+                <com.carnot.custom_views.AppTextViewLight
+                    android:id="@+id/txt_document_date"
+                    style="@style/AppTextViewStyleLikeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_dd_mm_yy"
+                    android:singleLine="true"
+                    android:textColor="@color/white" />
+
+                <com.carnot.custom_views.AppTextViewMedium
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/scale_20dp"
+                    android:layout_marginTop="@dimen/scale_27dp"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:text="@string/lbl_service_details"
+                    android:textColor="@color/white" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_services"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingBottom="@dimen/scale_10dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

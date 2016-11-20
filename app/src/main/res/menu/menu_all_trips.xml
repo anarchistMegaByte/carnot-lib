@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/action_calendar"
+        android:orderInCategory="100"
+        android:title="Calendar"
+        android:icon="@drawable/ic_mainnav_calendar_white"
+        app:showAsAction="always" />
+    <!--<item
+        android:id="@+id/action_device_info"
+        android:orderInCategory="100"
+        android:title="Menu 1"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_rash_driving_noti"
+        android:orderInCategory="100"
+        android:title="Menu 2"
+        app:showAsAction="never" />-->
+</menu>

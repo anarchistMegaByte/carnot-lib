@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical">
+
+    <com.carnot.custom_views.AppTextViewMedium
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="YOU"
+        android:textColor="@color/white"
+        android:visibility="invisible" />
+
+    <View
+        android:layout_width="@dimen/scale_1dp"
+        android:layout_height="@dimen/scale_8dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/scale_5dp"
+        android:layout_marginTop="@dimen/scale_5dp"
+        android:background="@color/black_translucent"
+         />
+
+    <com.carnot.custom_views.AppTextViewMedium
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="70"
+        android:textColor="@color/white"
+        android:visibility="invisible" />
+</LinearLayout>

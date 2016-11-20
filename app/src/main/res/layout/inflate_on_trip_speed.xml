@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/scale_240dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!--
+    <com.ontripactivity.AppTextViewMedium
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Speed"
+        android:textAllCaps="true"
+        android:textColor="@color/white" />
+        -->
+
+    <FrameLayout
+        android:layout_width="@dimen/scale_220dp"
+        android:layout_height="@dimen/scale_220dp"
+        android:layout_gravity="center">
+
+        <View
+            android:layout_width="@dimen/scale_220dp"
+            android:layout_height="@dimen/scale_220dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/black_cricle_speed" />
+
+        <com.carnot.libclasses.RippleBackground
+            android:id="@+id/riple_background"
+            android:layout_width="@dimen/scale_220dp"
+            android:layout_height="@dimen/scale_220dp"
+            android:layout_gravity="center_horizontal"
+            app:rb_color="@color/black"
+            app:rb_duration="3000"
+            app:rb_radius="48dp"
+            app:rb_rippleAmount="4"
+            app:rb_scale="2">
+
+            <ImageView
+                android:id="@+id/centerImage"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/img_caronmap_small_69" />
+        </com.carnot.libclasses.RippleBackground>
+
+        <com.carnot.custom_views.ArcView
+            android:id="@+id/arc_view"
+            android:layout_width="@dimen/scale_120dp"
+            android:layout_height="@dimen/scale_120dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:primaryColor="@color/white"
+            app:secondaryColor="@color/dark_gray"
+            app:starting_angle="135"
+            app:sweep_angle="270"
+            app:text="RPM 1000" />
+
+        <LinearLayout
+            android:layout_width="@dimen/scale_95dp"
+            android:layout_height="@dimen/scale_95dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_black"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.carnot.custom_views.AppTextViewLight
+
+                android:id="@+id/speed_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scale_2dp"
+                android:gravity="center"
+                android:padding="@dimen/scale_2dp"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_24sp" />
+
+            <com.carnot.custom_views.AppTextViewMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/scale_2dp"
+                android:paddingLeft="@dimen/scale_10dp"
+                android:paddingRight="@dimen/scale_10dp"
+                android:text="KMPH"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_10sp" />
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>

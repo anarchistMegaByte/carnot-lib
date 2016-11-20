@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialog_background_color"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.carnot.custom_views.AppTextViewMedium
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/scale_16dp"
+            android:layout_marginRight="@dimen/scale_16dp"
+            android:layout_marginTop="@dimen/scale_25dp"
+            android:text="@string/lbl_bluetooth_settings_info"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/scale_16dp"
+            android:layout_marginRight="@dimen/scale_16dp"
+            android:layout_marginTop="@dimen/scale_25dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/scale_24dp"
+                android:layout_height="@dimen/scale_24dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_bluetooth_white" />
+
+            <com.carnot.custom_views.AppTextViewMedium
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/scale_21dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/lbl_Bluetooth"
+                android:textColor="@color/white" />
+
+            <CheckBox
+                android:id="@+id/chk_bluetooth"
+                android:layout_width="@dimen/scale_45dp"
+                android:layout_height="@dimen/scale_45dp"
+                android:button="@drawable/switch_selector"
+                android:checked="true" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.carnot">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!--For Bluetooth connection-->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
+    <permission
+        android:name="com.carnot.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.carnot.permission.C2D_MESSAGE" />
+
+    <!--changing bluetooth-->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!--<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />-->
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="net.hockeyapp.android.appIdentifier"
+            android:value="${HOCKEYAPP_APP_ID}" />
+
+        <receiver android:name=".global.AlarmService"></receiver>
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".global.gcm.MyGcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".global.gcm.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".global.gcm.RegistrationIntentService"
+            android:exported="false" />
+
+        <!-- <<<<<<<<<<<<<<< ACTIVE ANDROID DATABASE, VERSION, TABLES-->
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="carnot.db" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="1" />
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="com.carnot.models.RiderProfile, com.carnot.models.Badges, com.carnot.models.Cars, com.carnot.models.Trip, com.carnot.models.CarDiagnostics, com.carnot.models.TripDetails, com.carnot.models.Routes, com.carnot.models.Graph, com.carnot.models.CarErrors,com.carnot.models.TripDetailMain, com.carnot.models.User, com.carnot.models.Document, com.carnot.global.gcm.GCMMessage, com.carnot.models.GraphData, com.carnot.models.Geofence, com.carnot.models.GlobalNotifSwitch" />
+
+        <!--ACTIVE ANDROID DATABASE, VERSION, TABLES >>>>>>>>>>>>>>>-->
+
+
+        <activity
+            android:name=".activity.ActivitySplash"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+
+        </activity>
+        <activity
+            android:name=".activity.ActivitySignup"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".activity.ActivitySignin"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ActivityForgotPassword"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ActivityDashboard"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ActivityPrivacySettings"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ActivityCarDashboard"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ActivityErrorCodeDetail"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ActivityAudibleErrorCodes"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.ActivityCarProfile"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ActivityDeviceInfo"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ActivityResetDevice"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ActivityCarPassport"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ActivityAllTrips"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ActivityOnTrip"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ActivityAddRegistrationCertificate"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ActivityAddServiceDetail"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ActivityNotificationSettings"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ActivityTripDetails"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ActivityRiderDashboard"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ActivityAllBadge"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ActivityNotification"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ActivityNotificationDetail"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ActivityGeofence"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".activity.ActivityRiderProfile"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.ActivityInviteRider"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.ActivityAddNewCarSetup"
+            android:theme="@style/AppTheme.Dialog"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:screenOrientation="portrait"/>
+
+        <!--
+            Services Declaration Section
+        -->
+
+        <service android:name=".AppService"></service>
+        <service android:name=".Services.LoadTripDetailService" />
+        <service android:name=".Services.FetchAddressIntentService" />
+
+        <!-- [START Bluetooth_service] -->
+        <service
+            android:name="com.carnot.Services.BLEService"
+            android:enabled="true"
+            android:exported="false" />
+        <!-- [END Bluetooth_service] -->
+
+        <receiver android:name=".libclasses.IncomingSms">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map_api_key" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <!--<meta-data-->
+        <!--android:name="io.fabric.ApiKey"-->
+        <!--android:value="d92e3fe93dc53dafacff73b68d13acfa78d9421d" />-->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="977abbf3e1a06ed32425e73d0a6c52bda892df51" />
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scale_64dp"
+        android:background="@color/carnot_list_background"
+        android:paddingLeft="@dimen/scale_16dp"
+        android:paddingRight="@dimen/scale_16dp">
+
+        <ImageView
+            android:id="@+id/img_play"
+            android:layout_width="@dimen/scale_36dp"
+            android:layout_height="@dimen/scale_36dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/audible_error_play_selector" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/scale_8dp"
+            android:layout_marginTop="@dimen/scale_8dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/scale_16dp">
+
+            <com.carnot.custom_views.AppTextViewMedium
+                android:id="@+id/audible_inflate_tv_filename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                tools:text="@string/lbl_bad_battery" />
+
+            <com.carnot.custom_views.AppTextViewLight
+                android:id="@+id/audible_inflate_tv_filetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/scale_5dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:text="00:10" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/audible_inflate_iv_checkebox"
+            android:layout_width="@dimen/scale_24dp"
+            android:layout_height="@dimen/scale_24dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rounded_check_box_selector"
+            android:paddingLeft="@dimen/scale_16dp" />
+
+    </LinearLayout>
+
+    <com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout
+        android:id="@+id/audible_inflate_expandableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        app:ael_duration="@integer/expand_animation_duration"
+        app:ael_interpolator="decelerate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/scale_8dp"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/scale_16dp"
+            android:paddingRight="@dimen/scale_16dp"
+            android:paddingTop="@dimen/scale_16dp">
+
+            <com.carnot.custom_views.AppTextViewLight
+                android:id="@+id/audible_inflate_error_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="abcsdfsd"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                tools:text="@string/lbl_bad_battery" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_errors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/audible_inflate_error_desc"
+                android:layout_marginTop="@dimen/scale_16dp"
+                android:clipToPadding="false" />
+
+        </LinearLayout>
+
+    </com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scale_4dp"
+        android:background="@color/black" />
+
+</LinearLayout>
+

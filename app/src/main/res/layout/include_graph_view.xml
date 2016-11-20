@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_graph"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/scale_208dp"
+    android:layout_marginLeft="@dimen/scale_16dp"
+    android:layout_marginRight="@dimen/scale_16dp"
+    android:background="@color/carnot_list_background">
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barchart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/scale_16dp"
+        android:layout_marginTop="@dimen/scale_8dp" />
+
+    <com.carnot.custom_views.AppTextViewMedium
+        android:id="@+id/txt_left_legend_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/scale_5dp"
+        android:layout_marginTop="@dimen/scale_3dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/scale_10dp"
+        tools:text="kmpl" />
+</FrameLayout>
+

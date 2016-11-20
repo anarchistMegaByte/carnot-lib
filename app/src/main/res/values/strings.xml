@@ -1,0 +1,366 @@
+<resources>
+    <!--created via pankaj@openxcelltechnolabs.com-->
+    <!--<string name="google_map_api_key">AIzaSyBfAqtT0xe2idy0r-7bpgQbHd0NcJBYpRw</string>-->
+    <!--created via carnot2016@gmail.com-->
+    <string name="google_map_api_key">AIzaSyAtoUXCcrGTxELOHn5ynYsuSbwoD886nZQ</string>
+    <string name="formatted_place_data">
+        %1$s\n
+    </string>
+
+    <string name="app_name">Carnot</string>
+    <string name="action_settings">Settings</string>
+    <string name="lbl_signup">Sign Up</string>
+    <string name="lbl_signin">Sign In</string>
+    <string name="lbl_or">OR</string>
+    <string name="lbl_name">Name</string>
+    <string name="lbl_enter_your_full_name">Enter Your Full Name</string>
+    <string name="lbl_email_id">Email ID</string>
+    <string name="lbl_email_id_mobile">Email ID/Mobile No</string>
+    <string name="lbl_enter_email_id">Enter Email ID</string>
+    <string name="lbl_enter_email_id_mobile">Enter Email ID/Mobile No</string>
+    <string name="lbl_password_hint">Should be at least 8 characters</string>
+    <string name="lbl_password">Password</string>
+    <string name="lbl_enter_password">Enter Password</string>
+    <string name="lbl_already_account_sign_in">Already have account, Sign in</string>
+    <string name="lbl_sign_in">SIGN IN</string>
+    <string name="lbl_send_password_reset_mail">Send One-time-password SMS</string>
+    <string name="lbl_forgot_password">Forgot Password</string>
+    <string name="lbl_cars">Car Garage</string>
+    <string name="lbl_carnot">Friends</string>
+    <string name="lbl_welcome_x">Welcome %1$s</string>
+    <string name="lbl_all_you_need">All you need is...</string>
+    <string name="lbl_carnot_adapter_info">You will need a new adapter for every car that you want to add.</string>
+    <string name="lbl_carnot_adapter">Carnot Adapter</string>
+    <string name="lbl_internet_access_info">Active internet connection to sync your carnot adapter.</string>
+    <string name="lbl_internet_access">Internet Access</string>
+    <string name="lbl_car_keys">Car Keys</string>
+    <string name="lbl_car_keys_info">You will need car keys to plug-in the device.</string>
+    <string name="lbl_get_started">Get Started</string>
+    <string name="lbl_safety_first">Safety First</string>
+    <string name="lbl_safety_first_info">In case of emergency or accidents, your emergency contacts will be notified of your location, and other details.</string>
+    <string name="lbl_contact_1">Contact 1</string>
+    <string name="lbl_contact_2">Contact 2</string>
+    <string name="lbl_contact_3">Contact 3</string>
+    <string name="hint_select_contact">Select Contact</string>
+    <string name="lbl_car_info">Car Info.</string>
+    <string name="lbl_about_car">Tell us about your car.</string>
+    <string name="lbl_nickname">Nickname</string>
+    <string name="hint_name_your_car">Name your car!</string>
+    <string name="lbl_license_no">License No.</string>
+    <string name="hint_enter_license_no">Enter License Number</string>
+    <string name="lbl_make">Make</string>
+    <string name="hint_brand">Brand</string>
+    <string name="hint_model">Model</string>
+    <string name="lbl_plugin_adapter">Plug-In Adapter</string>
+    <string name="lbl_plugin_adapter_info">Insert the Carnot adapter in the OBD port of your car.</string>
+    <string name="lbl_need_help">Need Help?</string>
+    <string name="lbl_contact_us">Contact Us</string>
+    <string name="lbl_bluetooth_settings">Bluetooth Settings</string>
+    <string name="lbl_bluetooth_settings_info">Turn Bluetooth On. Carnot adapter needs to pair with your phone to activate.</string>
+    <string name="lbl_Bluetooth">Bluetooth</string>
+    <string name="lbl_security_code">Device setup</string>
+    <string name="lbl_security_code_info">Enter your 16-digit device passcode.</string>
+    <string name="lbl_next">Next</string>
+    <string name="lbl_finish">Finish</string>
+    <string name="lbl_previous">Previous</string>
+
+    <string name="lbl_share_location">SHARE LOCATION</string>
+    <string name="lbl_with_family">With Family</string>
+    <string name="lbl_custom">Custom</string>
+    <string name="lbl_connection">CONNECTION</string>
+    <string name="lbl_engine_health">ENGINE HEALTH</string>
+    <string name="lbl_connected">CONNECTED</string>
+    <string name="lbl_not_connected">NOT CONNECTED</string>
+    <string name="lbl_signal">SIGNAL</string>
+    <string name="lbl_advanced_stats">ADVANCED STATS</string>
+    <string name="lbl_battery_health">BATTERY HEALTH</string>
+    <string name="lbl_cabintemperature">CABINTEMPERATURE</string>
+    <string name="action_notification">Notification</string>
+    <string name="action_car_passport">Car Passport</string>
+    <string name="action_device_info">Device Info</string>
+    <string name="action_alert_settings">Alert Settings</string>
+    <string name="lbl_tab_dashboard">DASHBOARD</string>
+    <string name="lbl_tab_diagnostics">DIAGNOSTICS</string>
+    <string name="lbl_ok">OK</string>
+    <string name="lbl_tyre_pressure">TYRE PRESSURE</string>
+    <string name="lbl_P0729">P0729</string>
+    <string name="lbl_scan_for_errors">SCAN FOR ERRORS</string>
+    <string name="lbl_help1">Hear something funny? Identify noises</string>
+    <string name="lbl_help2">Read the car e-manual</string>
+
+    <string name="lbl_error_code_x">Error Code %s</string>
+    <string name="lbl_error_code">Error Code %s</string>
+    <string name="lbl_Medium">Medium</string>
+    <string name="lbl_locate">LOCATE</string>
+    <string name="lbl_audible_title">INDENTIFY THE SOUND IN YOUR CAR</string>
+
+    <string name="lbl_mileage">mileage</string>
+    <string name="lbl_on_trip">ON TRIP</string>
+    <string name="lbl_trip">trips</string>
+    <string name="lbl_trip_in_hr">trip (Hr)</string>
+    <string name="lbl_trip_in_hrs">trip (Hrs)</string>
+    <string name="lbl_distance_in_km">distance (km)</string>
+    <string name="lbl_carbon_footprint_with_kg">CARBON FOOTPRINT (KG)</string>
+    <string name="lbl_carbon_footprint">CARBON FOOTPRINT</string>
+    <string name="lbl_kmpl">kmpl</string>
+    <string name="lbl_past_trips">past trips</string>
+    <string name="lbl_highlights">RECENT TRIPS</string>
+    <string name="lbl_view_all_trips">View All Trips</string>
+    <string name="lbl_time">Time</string>
+    <string name="lbl_all_time">All Time</string>
+    <string name="lbl_distance">Distance</string>
+    <string name="lbl_bad_battery">Bad Battery</string>
+    <string name="lbl_audible_error_codes">Audible Error Codes</string>
+    <string name="lbl_drive_score">Drive score</string>
+    <string name="lbl_what_does_it_mean_for_environment">What does it mean for the environment?</string>
+    <string name="lbl_will_have_to_work">Will have to work for 1 year to offset this emission.</string>
+    <string name="lbl_engine_oil">Engine Oil</string>
+    <string name="lbl_carnot_device_number">Carnot Device Number</string>
+    <string name="lbl_firmware_id">Firmware ID</string>
+    <string name="copyright_carnot_2016">&#169; Carnot 2016</string>
+    <string name="lbl_firmware_emannual">Read about Firmware Updates and Mannual here</string>
+    <string name="lbl_reset_device">Reset Device</string>
+    <string name="lbl_device_reset_desc">Resetting the device will delete all past record and information stored about your car and will allow you to start a fresh</string>
+    <string name="action_reset_device">Reset Device</string>
+    <string name="lbl_cancel">Cancel</string>
+    <string name="dialog_title_confirm_changes">Confirm Changes</string>
+    <string name="lbl_confirm_dialog_msg">You will not be able to  restore any saved information.</string>
+    <string name="lbl_select_cover_photo">Select Cover Photo</string>
+    <string name="lbl_take_photo">Take Photo</string>
+    <string name="lbl_choose_from_gallery">Choose From Gallery</string>
+    <string name="lbl_notification_settings_info">We inform you in case of Rash Driving and Speeding above limit. Please set limit.</string>
+    <string name="lbl_Rash_Driving">Rash Driving</string>
+    <string name="lbl_empty_msg_car_passport">You haven\'t added any documents yet.</string>
+    <string name="lbl_select_document_type">Select Document Type</string>
+    <string name="lbl_registration_certificate">Registration Certificate</string>
+    <string name="lbl_puc">PUC</string>
+    <string name="lbl_insurance">Insurance</string>
+    <string name="lbl_Driver_License">Driver\'s License</string>
+    <string name="lbl_service_details">Service Details</string>
+    <string name="lbl_yellow_submarine">Yellow Submarine</string>
+    <string name="lbl_coolanttemperature">COOLANT TEMPERATURE</string>
+    <string name="lbl_all_trips">All Trips</string>
+    <string name="lbl_end_trip">End Trip</string>
+    <string name="lbl_speed">Speed</string>
+    <string name="lbl_add_registration_certificate">Add Registration Certificate</string>
+    <string name="lbl_document_type">Document Type</string>
+    <string name="hint_registration_certificate">Registration Certificate</string>
+    <string name="lbl_registration_number">Registration Number</string>
+    <string name="hint_registration_number">Registration Number</string>
+    <string name="lbl_date_of_purchase">Date Of Purchase</string>
+    <string name="hint_dd_mm_yy">dd/mm/yy</string>
+    <string name="lbl_document">Document</string>
+    <string name="lbl_documents">Documents</string>
+    <string name="lbl_service_history">Service History</string>
+    <string name="lbl_edit">Edit</string>
+    <string name="lbl_delete">Delete</string>
+    <string name="lbl_name_service_centre">Name of Service Centre</string>
+    <string name="hint_type_name_of_service_centre">Type name of the service centre</string>
+    <string name="lbl_date_of_service">Date of Service</string>
+    <string name="lbl_add_service_details">Add Service Details</string>
+    <string name="action_car_profile">Car Profile</string>
+    <string name="lbl_car_profile">Car Profile</string>
+    <string name="lbl_notification_settings">Notification Settings</string>
+    <string name="lbl_Speed_Threshold">Speed Threshold [%1$s]</string>
+    <string name="lbl_70">70</string>
+    <string name="lbl_200">200</string>
+    <string name="lbl_invite_a_rider">Invite A Rider</string>
+    <string name="hint_invite_rider">Type in Email ID</string>
+    <string name="lbl_search_rider">Search Rider</string>
+    <string name="lbl_recent_badges">Recent Badges</string>
+    <string name="lbl_view_all">View All</string>
+    <string name="lbl_driver_score">Driver Score</string>
+    <string name="lbl_distance_with_km">DISTANCE (KM)</string>
+    <string name="lbl_good_gear_change">Good Gear Change</string>
+    <string name="lbl_idling">Idling</string>
+    <string name="lbl_speeding">Speeding</string>
+    <string name="lbl_no_hard_breaks">No Hard Brakes</string>
+    <string name="lbl_hard_acceleration">Hard acc/brakes</string>
+    <string name="lbl_hard_acceleration_brak">Hard Acceleration and Braking</string>
+    <string name="lbl_speed_in_kmpl">Speed (kmpl)</string>
+    <string name="lbl_speed_in_kmph">Speed (kmph)</string>
+    <string name="lbl_dismiss">dismiss</string>dsf
+    <string name="lbl_badge_info">Level up by changing your gears more accurately based on speed</string>
+    <string name="lbl_speed_with_kmph">Speed (KMPH)</string>
+    <string name="lbl_time_with_hr">Time (HR)</string>
+    <string name="lbl_trip_completed">Trip Completed</string>
+    <string name="lbl_2_hard_accelerations">2 Hard Accelerations</string>
+    <string name="lbl_here_are_some_tips_to_boost_your_score">HERE ARE SOME TIPS TO BOOST YOUR SCORE</string>
+    <string name="lbl_notifications">Notifications</string>
+    <!-- Badges values-->
+    <string name="badge_1000_KMS">1000 KMS</string>
+    <string name="badge_100_HRS">100 HRS</string>
+    <string name="badge_ECO_WARRIOR">ECO WARRIOR</string>
+
+    <string name="badge_5000_KMS">5000 KMS</string>
+    <string name="badge_10000_KMS">10000 KMS</string>
+    <string name="badge_50000_KM">50000 KMS</string>
+
+
+    <string name="badge_200_HRS">200 HRS</string>
+    <string name="badge_400_HRS">200 HRS</string>
+    <string name="badge_800_HRS">200 HRS</string>
+    <string name="lbl_badges_earned">Badges Earned</string>
+    <string name="lbl_badges_to_be_earned">Badges To be Earned</string>
+    <string name="lbl_all_badges">All Badges</string>
+    <string name="lbl_badge_reward_info">You have completed 2500 Kms on Volkswagan 1784.Just a few more to go!</string>
+    <string name="action_location_privacy_settings">Location privacy setting</string>
+    <string name="action_edit_profile">Edit Profile</string>
+    <string name="lbl_send_invite">Send Invite</string>
+    <string name="hint_enter_your_name">Enter Your Name</string>
+    <string name="lbl_date_of_birth">Date Of Birth</string>
+    <string name="hint_select_your_dob">Select Your Date Of Birth</string>
+    <string name="hint_enter_your_age">Enter Your Age</string>
+    <string name="lbl_age">Age</string>
+    <string name="lbl_gender">Gender</string>
+    <string name="lbl_male">Male</string>
+    <string name="lbl_female">Female</string>
+    <string name="lbl_emergency_contact">Emergency Contact</string>
+    <string name="lbl_emergency_contact_info">In case of emergency or accidents, your emergency contacts will be notified of your location and other details.</string>
+    <string name="lbl_privacy_settings">Privacy Settings</string>
+    <string name="lbl_sos_alert">SOS Alert</string>
+    <string name="lbl_dismiss_x">Dismiss (%1$s)</string>
+
+
+    <!-- transitions -->
+    <string name="transition_txt_drive_score">transition_txt_drive_score</string>
+    <string name="transition_lbl_drive_score">transition_lbl_drive_score</string>
+
+
+    <string name="server_error">Server Encountered Some Error</string>
+    <string name="msg_internet_alert">No Internet connection</string>
+
+    <!--Facebook API Key - android.testapps@gmail.com-->
+    <string name="facebook_app_id">588565267969994</string>
+    <string name="msg_mendatory_name">Name is mandatory</string>
+    <string name="msg_mendatory_license_no">License Number is mandatory</string>
+    <string name="msg_mendatory_contact">Select atleast one contact</string>
+    <string name="msg_mendatory_mobile">Mobile No is mandatory</string>
+    <string name="msg_mobile_length">Mobile No length must be 10 digit</string>
+    <string name="msg_mendatory_email">Email is mandatory</string>
+    <string name="msg_name_atleast_3_character">Name should contain atleast 3 characters.</string>
+    <string name="msg_mendatory_password">Password is mandatory</string>
+    <string name="lbl_X_Trees">%1$s Trees</string>
+    <string name="action_logout">Logout</string>
+    <string name="lbl_hybrid_car">Hybrid Car</string>
+    <string name="lbl_public_transport_avg">Public Transport (Avg)</string>
+    <string name="lbl_my_car">My Car</string>
+    <string name="msg_password_length">Password length must be inbetween 8 to 20.</string>
+    <string name="msg_invalid_username_password">Invalid username or password.</string>
+    <string name="msg_select_photo">Choose some image</string>
+    <string name="msg_enter_registration_no">Enter No.</string>
+    <string name="msg_enter_nickname">Enter Nickname.</string>
+    <string name="msg_enter_date_of_purchase">Enter date</string>
+    <string name="action_my_profile">My Profile</string>
+
+    <string name="lbl_valid_till">Valid Till</string>
+    <string name="lbl_dl_number">DL Number</string>
+    <string name="lbl_date_of_registration">Date of registration</string>
+    <string name="lbl_add_puc_detail">Add PUC Details</string>
+    <string name="lbl_add_insurance_detail">Add Insurance Details</string>
+    <string name="lbl_add_dl_detail">Add DL Details</string>
+    <string name="msg_enter_license_no">Enter License No</string>
+    <string name="msg_enter_valid_license_no">Enter Valid Registration No</string>
+    <string name="msg_enter_brand">Enter Brand</string>
+    <string name="msg_enter_dob">Enter Age</string>
+    <string name="msg_enter_model">Enter Model</string>
+    <string name="lbl_phone">Mobile Number</string>
+    <string name="lbl_enter_phone">Your 10-digit mobile number.</string>
+    <string name="lbl_confirmation">Confirmation</string>
+    <string name="msg_confirm_mobile_no">You entered Mobile No\n\n  %1$s\n\nWe will send One Time Password on this number, Sure want to continue?</string>
+    <string name="lbl_enter_otp_code">Please Enter OTP Code</string>
+    <string name="lbl_verify">Verify</string>
+    <string name="lbl_incorrect_code_try_again">Incorrect code, Please try again.</string>
+    <string name="msg_otp_code_blank">OTP Can\'t be blank</string>
+    <string name="msg_device_dont_have_bluetooth">Device don\'t have bluetooth</string>
+    <string name="msg_enter_details">Enter details</string>
+    <string name="msg_pin_key">Enter 16 digit passcode written on device</string>
+    <string name="action_on_trip">On Trip</string>
+    <string name="msg_no_trips_for_x">No Trips found for %1$s\n Clear</string>
+    <string name="msg_no_trips">No Trips found </string>
+    <string name="lbl_search_for_x">Filter Result for %1$s</string>
+    <string name="action_add_car">Add Car</string>
+    <string name="lbl_no_errors_found">I am in good health. Thanks for taking good care!</string>
+    <string name="lbl_help3">Need Help? Call for free Road Side Assistance.</string>
+    <string name="hint_enter_license_no_hint">eg, DL-01-AK-0012</string>
+    <string name="lbl_avg_speed">Avg Speed (KMPH)</string>
+    <string name="lbl_this_week">This Week</string>
+    <string name="lbl_no_trips">NO TRIPS</string>
+    <string name="lbl_rider_dashboard_message">This is where your friends will show up when they join the Carnot Family!</string>
+    <string name="msg_enter_service_center_name">Enter service center name</string>
+    <string name="lbl_new_password">New password</string>
+    <string name="lbl_enter_new_password">Enter new password</string>
+    <string name="msg_no_notification">No Notification</string>
+    <string name="lbl_eco_driving">Eco-Driving</string>
+    <string name="lbl_overspeeding">Overspeeding</string>
+    <string name="action_help">Help</string>
+    <string name="msg_syncing_is_in_progress">Syncing is in progress</string>
+    <string name="action_share">Share</string>
+    <string name="lbl_fuel_type">Fuel Type</string>
+    <string name="lbl_other">Other</string>
+    <string name="lbl_diesel">Diesel</string>
+    <string name="lbl_petrol">Petrol</string>
+    <string name="lbl_change_password">Change Password</string>
+    <string name="msg_password_changed_successfully">Password changed successfully</string>
+    <string name="msg_adding_car_wait">Adding car, Please wait</string>
+    <string name="lbl_high">High</string>
+    <string name="help_first_screen">Help is available on first cars tab</string>
+    <string name="lbl_show_short_trips">Show short trips (less then 1 km)</string>
+
+    <!-- By Manav -->
+    <!-- Strings for pref manager -->
+    <string name="auto_dismiss_welcome_message">Auto Dismiss Welcome Message</string>
+    <string name="pref_recent_trip_call_ts">get recent trip last call timestamp</string>
+    <string name="set_alarm_for_get_recent_trip_api">set alarm for trip syncing</string>
+    <string name="no_internet_connection_found">No internet connection found !</string>
+    <string name="first_time_welcome_message_for_default_lut">Welcome %1$s, It\'s nice to finally talk to you! This card is where I will talk with you. \nI\'m scanning for GSM signal and GPS satellites. It can take up to 10 mins since this is the first time</string>
+    <string name="first_time_welcome_message_for_gps_present">GPS signal locked! Now you can see my %1$s locations on the maps anytime :) </string>
+    <string name="first_time_welcome_message_for_gsm_present">Oops, %1$s lost GPS signal. Searching for satellites. The current location is from GSM which may have some inaccuracy</string>
+    <string name="car_on_gsm_signal_first_time_message">Oops, %1$s lost GPS signal. Searching for satellites. The current location is from GSM which may have some inaccuracy</string>
+    <string name="update_your_car_info">Have you entered any car documents for your car (%1$s) ? Please enter your Car Details here.</string>
+    <string name="after_fifteen_minute_timer">%1$s, I am not able to catch a GPS signal. Can you move me to a location open to sky and just let me try for 15 mins. \n \nIt\'s hard to catch a signal if there are obstructions like in a basement of between several large buildings.Contact us for additional help [here]</string>
+    <string name="gsm_loc_yes_gps_loc_no">Oops, %1$s, I\'ve lost GPS signal. The current location is via GSM. It may be a little inaccurate. But worry not, I am still protected and will let you know of any trouble</string>
+    <string name="no_gl_no_gps">%1$s, we have a small problem. I\'ve lost location. The one on map is last know location. I can still send you security alerts though. I should get back location in some time.</string>
+    <!--<string name="dummey_welcome">Welcome %1$s, It\'s nice to finally talk to you! This card is where I will speak with you.</string> -->
+    <string name="dummey_welcome">Welcome %1$s, It\'s all good here :) </string>
+    <string name="internet_not_present">Please enable your mobile internet, to connect with me.</string>
+
+
+
+    <string name="first_time_no_GI_timer_ON">Welcome %1$s, It\'s nice to finally talk to you! This card is where I will talk with you.\n
+I\'m scanning for mobile network and GPS satellites. It can take up to 15 mins since this is the first time</string>
+    <string name="first_time_GI_no_GPS_TIMER_on">Welcome %1$s, It\'s nice to finally talk to you! This card is where I will talk with you.\n
+I\'ve got mobile network. Now scanning for GPS satellites. This can take up to 15 mins since it\'s the first time</string>
+    <string name="first_time_GPS_present">GPS signal locked! Now you can see my locations on the maps anytime :)</string>
+    <string name="regular_offset_LUT">%1$s, I have lost network. It happens in areas with poor network signal like basements. I may not be able to alert you in case of an issue till I get into network"</string>
+    <string name="terms_and_condition">I have read and agree to abide by the {Terms of Service} and [Privacy policy] for using Carnot.</string>
+    <string name="lbl_all_time_drive_score">All Time Drive score</string>
+    <string name="lbl_total_distance_in_km">Total Distance (km)</string>
+    <string name="lbl_all_time_mileage">All Time Mileage</string>
+
+    <string name="geofencing">Geofencing</string>
+    <string name="geofence_dummy">Name</string>
+    <string name="accident_alert">Accident Alert</string>
+    <string name="towing_alert">Towings Alerts</string>
+    <string name="lbl_Vandalism">Vandalism Alerts</string>
+    <string name="accident_notif_info">In case of an accident, we inform 3 emergency contacts with location of accident.</string>
+
+    <string name="my_car_says_first_time_LUT">Welcome %1$s, It\'s nice to finally talk to you!\nI\'m scanning for mobile network and GPS satellites. It can take up to 15 mins since this is the first time</string>
+    <string name="my_car_says_first_time_lock">Welcome %1$s, GPS signal locked! Now you can track me on the map below anytime. </string>
+    <string name="my_car_says_first_time_timer_off">Hello %1$s, I am not able to catch a GPS signal. Can you move me to a location open to sky and let me try for another 15 mins.
+It\'s hard to catch a signal if there are obstructions like in a basement of between several large buildings.</string>
+    <string name="my_car_says_first_time_lock_two_or_zero">Welcome %1$s, I\'ve got mobile network. Now scanning for GPS satellites. This can take up to 15 mins since it\'s the first time</string>
+
+    <string name="my_car_says_regular_LUT">I\'m not in mobile network range. I cannot alert you in case of an issue till I get back in network</string>
+    <string name="my_car_says_regular_lock_zero">I\'ve lost location signal. The location on map is last known. I am still able to alert  you in case of an issue</string>
+    <string name="my_car_says_regular_lock_two">Oops, I\'ve lost GPS signal. The current location is approximate. I am still able to alert you in case of an issue</string>
+    <string name="my_car_says_regular_lock_one">Hello %1$s, It\'s all good here :)</string>
+
+    <string name="my_car_says_internet_not_present">Hello %1$s, No internet connection on mobile. Please connect to the internet to track me.</string>
+
+    <string name="my_car_says_card_for_on_trip_status">I\'m going for a ride! Enable Bluetooth [here] to check out the live dashboard.</string>
+    <string name="my_car_says_card_for_on_trip_status_enable_loc">I\'m going for a ride! Enable location [here] to check out the live dashboard.</string>
+    <string name="my_car_says_card_for_on_trip_status_with_no_location">I\'m going for a ride! Enable {Bluetooth} and [location] to check out the live dashboard</string>
+    <string name="my_car_says_card_for_on_trip_status_ble_connectd">I\'m going for a ride! Check out the live dashboard [here].</string>
+    <string name="my_car_says_card_for_no_device_near">I\'m going for a ride! Connect with me via bluetooth to see the live dashboard</string>
+</resources>

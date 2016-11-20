@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/scale_13dp"
+        android:layout_marginLeft="@dimen/scale_16dp"
+        android:layout_marginRight="@dimen/scale_16dp"
+        android:layout_marginTop="@dimen/scale_29dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.carnot.custom_views.AppTextViewMedium
+            android:id="@+id/txt_lbl_recent_trips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_highlights"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_16sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.carnot.custom_views.AppTextViewMedium
+            android:id="@+id/txt_lbl_last_sync_time"
+            android:layout_width="wrap_content"
+            android:gravity="bottom"
+            android:layout_height="@dimen/textsize_16sp"
+            android:text="Last Sync At : "
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_10sp"/>
+
+        <ImageView
+            android:layout_width="@dimen/scale_25dp"
+            android:layout_height="@dimen/scale_25dp"
+            android:background="@drawable/ic_nav_fresh_white"
+            android:id="@+id/refreshImage"/>
+
+        <com.carnot.custom_views.AppTextViewMedium
+            android:id="@+id/txt_view_all_trips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_view_all_trips"
+            android:textColor="@color/colorAccent"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/scale_16dp"
+        android:layout_marginRight="@dimen/scale_16dp"
+        android:background="@color/carnot_list_background"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_highlights"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/scale_10dp"
+            android:paddingTop="@dimen/scale_16dp" />
+
+        <!--<FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_highlights"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/scale_10dp"
+                android:paddingTop="@dimen/scale_16dp" />
+
+            <com.carnot.custom_views.AppTextViewLight
+                android:id="@+id/txt_error_no_trip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="No Trips"
+                android:visibility="gone" />
+        </FrameLayout>-->
+
+        <com.carnot.custom_views.AppButton
+            android:id="@+id/btn_view_all_trips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/scale_10dp"
+            android:paddingLeft="@dimen/scale_10dp"
+            android:paddingRight="@dimen/scale_10dp"
+            android:text="@string/lbl_view_all_trips" />
+
+    </LinearLayout>
+</LinearLayout>

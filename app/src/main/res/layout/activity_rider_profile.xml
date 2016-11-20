@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:foo="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_light_transparent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.carnot.custom_views.EditableLinearLayout
+                android:id="@+id/editable_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/scale_200dp"
+                    android:background="@drawable/img_white_transparent"
+                    android:fitsSystemWindows="true"
+
+                    app:layout_collapseMode="parallax"
+                    app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+
+                    <ImageView
+                        android:id="@+id/ivCarPic"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/scale_200dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_driver_full_screen" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/ivCamera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:paddingBottom="@dimen/scale_16dp"
+                        android:paddingRight="@dimen/scale_16dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_camera_white" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/scale_16dp"
+                    android:layout_marginRight="@dimen/scale_16dp"
+                    android:layout_marginTop="@dimen/scale_33dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_profile_circle_black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/scale_16dp"
+                        android:orientation="vertical">
+
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/scale_4dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/lbl_nickname"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_10sp" />
+
+                        <com.carnot.custom_views.AppEditTextLight
+                            android:id="@+id/edt_nickname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:hint="@string/hint_enter_your_name"
+                            android:inputType="textNoSuggestions"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_12sp" />
+
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/scale_4dp"
+                            android:layout_marginTop="@dimen/scale_31dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/lbl_age"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_10sp" />
+
+                        <com.carnot.custom_views.AppEditTextLight
+                            android:id="@+id/edt_dob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:hint="@string/hint_enter_your_age"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_12sp" />
+
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/scale_4dp"
+                            android:layout_marginTop="@dimen/scale_27dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/lbl_gender"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_10sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radio_group_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/scale_14dp"
+                            android:orientation="horizontal">
+
+                            <com.carnot.custom_views.AppRadioButtom
+                                android:id="@+id/radio_male"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="@string/lbl_male" />
+
+                            <com.carnot.custom_views.AppRadioButtom
+                                android:id="@+id/radio_female"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_4dp"
+                                android:text="@string/lbl_female" />
+
+                        </RadioGroup>
+
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/scale_4dp"
+                            android:layout_marginTop="@dimen/scale_31dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/lbl_emergency_contact"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_10sp" />
+
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/scale_4dp"
+                            android:layout_marginTop="@dimen/scale_11dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/lbl_emergency_contact_info"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_12sp" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_emergency_contacts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!--<include layout="@layout/include_emergency_contact" />
+
+                            <include layout="@layout/include_emergency_contact" />
+
+                            <include layout="@layout/include_emergency_contact" />-->
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.carnot.custom_views.EditableLinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!--<android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapse_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/black_light_transparent"
+            app:expandedTitleGravity="center_horizontal|top"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scale_240dp"
+                android:background="@drawable/img_white_transparent"
+                android:fitsSystemWindows="true"
+
+                app:layout_collapseMode="parallax"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/ivCarPic"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/scale_240dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_driver_full_screen" />
+
+                <ImageView
+                    android:id="@+id/ivCamera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:paddingBottom="@dimen/scale_16dp"
+                    android:paddingRight="@dimen/scale_16dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_camera_white" />
+
+            </FrameLayout>
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+
+                android:background="@android:color/transparent"
+
+
+                android:contentInsetEnd="0dp"
+                android:contentInsetStart="0dp"
+                android:elevation="4dp"
+                android:titleTextAppearance="@android:color/transparent"
+                app:contentInsetLeft="0dp"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:titleMarginTop="13dp"
+
+                />
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/scale_16dp"
+                    android:layout_marginRight="@dimen/scale_16dp"
+                    android:layout_marginTop="@dimen/scale_33dp"
+                    android:clickable="true"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_profile_circle_black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/scale_16dp"
+                        android:orientation="vertical">
+
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/scale_4dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/lbl_nickname"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_10sp" />
+
+                        <com.carnot.custom_views.AppEditTextLight
+                            android:id="@+id/edt_nickname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:hint="@string/hint_enter_your_name"
+                            android:inputType="textNoSuggestions"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_12sp" />
+
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/scale_4dp"
+                            android:layout_marginTop="@dimen/scale_31dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/lbl_age"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_10sp" />
+
+                        <com.carnot.custom_views.AppEditTextLight
+                            android:id="@+id/edt_dob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:hint="@string/hint_enter_your_age"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_12sp" />
+
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/scale_4dp"
+                            android:layout_marginTop="@dimen/scale_27dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/lbl_gender"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_10sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radio_group_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/scale_14dp"
+                            android:orientation="horizontal">
+
+                            <com.carnot.custom_views.AppRadioButtom
+                                android:id="@+id/radio_male"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="@string/lbl_male" />
+
+                            <com.carnot.custom_views.AppRadioButtom
+                                android:id="@+id/radio_female"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_4dp"
+                                android:text="@string/lbl_female" />
+
+                        </RadioGroup>
+
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/scale_4dp"
+                            android:layout_marginTop="@dimen/scale_31dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/lbl_emergency_contact"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_10sp" />
+
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/scale_4dp"
+                            android:layout_marginTop="@dimen/scale_11dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/lbl_emergency_contact_info"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_12sp" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_emergency_contacts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            &lt;!&ndash;<include layout="@layout/include_emergency_contact" />
+
+                            <include layout="@layout/include_emergency_contact" />
+
+                            <include layout="@layout/include_emergency_contact" />&ndash;&gt;
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>-->
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/setting_box">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scale_200dp">
+
+            <ImageView
+                android:layout_width="@dimen/scale_240dp"
+                android:layout_height="@dimen/scale_100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/img_caronmap_small"
+
+                />
+
+        </RelativeLayout>
+
+
+        <com.carnot.custom_views.AppTextViewMedium
+            android:id="@+id/lbl_error_category"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scale_48dp"
+            android:background="@color/yellow"
+            android:drawableLeft="@drawable/ic_info_white_small"
+            android:drawablePadding="@dimen/scale_8dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/scale_16dp"
+            android:text="@string/lbl_Medium"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/linear_container_witfamily"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/scale_16dp"
+            android:paddingRight="@dimen/scale_16dp"
+            android:paddingTop="@dimen/scale_21dp">
+
+            <com.carnot.custom_views.AppTextViewLight
+                android:id="@+id/txt_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:paddingBottom="@dimen/scale_16dp"
+                android:textColor="@color/white"
+                tools:text="Error Description here" />
+
+            <com.carnot.custom_views.AppButton
+                android:id="@+id/btn_Locate"
+                android:layout_width="@dimen/scale_152dp"
+                android:layout_height="@dimen/scale_36dp"
+                android:gravity="center"
+                android:text="@string/lbl_locate"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

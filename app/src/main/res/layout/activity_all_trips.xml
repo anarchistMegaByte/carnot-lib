@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialog_background_color"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <!--    <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <include
+                layout="@layout/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+            &lt;!&ndash;android:layout_height="?attr/actionBarSize"&ndash;&gt;
+
+        </android.support.design.widget.AppBarLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.carnot.custom_views.AppTextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/lbl_show_short_trips"
+            android:textColor="@color/white" />
+        <CheckBox
+            android:id="@+id/chk_show_short_trips"
+            android:layout_width="@dimen/scale_45dp"
+            android:layout_height="@dimen/scale_45dp"
+            android:button="@drawable/switch_selector"
+            android:checked="false" />
+    </LinearLayout>
+
+
+    <com.carnot.custom_views.AppTextViewLight
+        android:id="@+id/txt_filter_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_mainnav_close_white"
+        android:gravity="center"
+        android:padding="@dimen/scale_10dp"
+        android:text="@string/lbl_search_for_x" />
+
+    <com.carnot.custom_views.AppTextViewMedium
+        android:id="@+id/txt_notification_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scale_48dp"
+        android:background="@color/green_text_color"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_info_white_small"
+        android:drawablePadding="@dimen/scale_10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/scale_10dp"
+        android:paddingRight="@dimen/scale_10dp"
+        android:singleLine="true"
+        android:text="Renew car insurance. It expires on 12/12/16"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_12sp" />
+
+    <include
+        layout="@layout/include_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:contentDescription="Badge Header "
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/scale_96dp"
+        android:layout_height="@dimen/scale_96dp"
+        android:src="@drawable/ic_badge_rocketeer" />
+
+    <com.carnot.custom_views.AppTextViewLight
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/scale_17dp"
+        android:gravity="center"
+        android:text="Rocketeer"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_20sp" />
+
+    <com.carnot.custom_views.AppTextViewLight
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/scale_10dp"
+        android:layout_marginTop="@dimen/scale_9dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/scale_5dp"
+        android:paddingRight="@dimen/scale_5dp"
+        android:text="@string/lbl_badge_info"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_10sp" />
+
+</LinearLayout>

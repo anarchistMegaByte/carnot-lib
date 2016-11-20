@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.carnot.libclasses.SquaredFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/scale_5dp"
+    android:background="@color/transparent"
+    android:contentDescription="Badge Header "
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/iv_badge"
+                android:layout_width="@dimen/scale_72dp"
+                android:layout_height="@dimen/scale_72dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_badge_rocketeer" />
+
+            <com.carnot.custom_views.DriveScoreView
+                android:id="@+id/drive_score_view"
+                android:layout_width="@dimen/scale_72dp"
+                android:layout_height="@dimen/scale_72dp"
+                android:layout_gravity="center"
+                app:primary_color="@color/transparent"
+                app:score="25"
+
+                app:secondary_color="#88000000" />
+        </FrameLayout>
+
+
+        <com.carnot.custom_views.AppTextViewLight
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/scale_10dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_12sp"
+            tools:text="" />
+
+
+    </LinearLayout>
+
+</com.carnot.libclasses.SquaredFrameLayout>

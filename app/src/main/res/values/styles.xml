@@ -1,0 +1,174 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--Theme.AppCompat.NoActionBar-->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="appButtonStyle">@style/AppButton</item>
+        <item name="appCheckBoxStyle">@style/AppCheckBox</item>
+        <item name="appEditTextStyle">@style/AppEditText</item>
+        <item name="appRadioButtonStyle">@style/AppRadioButton</item>
+
+        <item name="appAutoEditTextStyle">@style/AppEditText</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+
+        <!-- animation for activities-->
+        <item name="android:windowContentTransitions">true</item>
+
+    </style>
+
+    <style name="AppThemeTransparent" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+
+        <item name="appButtonStyle">@style/AppButton</item>
+        <item name="appCheckBoxStyle">@style/AppCheckBox</item>
+        <item name="appEditTextStyle">@style/AppEditText</item>
+
+    </style>
+
+
+    <style name="AppTheme.Dialog" parent="Theme.AppCompat.Dialog">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="appButtonStyle">@style/AppButton</item>
+        <item name="appCheckBoxStyle">@style/AppCheckBox</item>
+        <item name="appEditTextStyle">@style/AppEditText</item>
+        <item name="appRadioButtonStyle">@style/AppRadioButton</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+
+        <item name="colorControlNormal">@color/white_light</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="android:textColorHint">@color/white_light</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--Custom Styles-->
+    <style name="AppButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="elevation">10dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:background">@drawable/checkbox_background</item>
+        <item name="buttonTint">@color/colorAccent</item>
+    </style>
+
+    <style name="AppRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:background">@color/transparent</item>
+        <item name="buttonTint">@color/colorAccent</item>
+    </style>
+
+    <style name="AppProgressBar" parent="Widget.AppCompat.ProgressBar">
+
+    </style>
+
+    <style name="AppAutoEditText" parent="Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:paddingBottom">@dimen/scale_15dp</item>
+        <item name="colorControlNormal">@color/white_light</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="android:textColorHint">@color/white_light</item>
+    </style>
+
+    <style name="AppEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:paddingBottom">@dimen/scale_15dp</item>
+        <item name="colorControlNormal">@color/white_light</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="android:textColorHint">@color/white_light</item>
+    </style>
+
+    <style name="AppTextViewStyleLikeEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:paddingBottom">@dimen/scale_15dp</item>
+        <item name="colorControlNormal">@color/white_light</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="android:textColorHint">@color/white_light</item>
+        <item name="android:focusable">false</item>
+    </style>
+
+
+    <style name="ToolBarStyle.Base" parent="">
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="ToolBarStyle.Event" parent="ToolBarStyle.Base">
+        <item name="titleTextAppearance">@style/TextAppearance.Widget.Event.Toolbar.Title</item>
+    </style>
+
+    <style name="ToolbarPopupTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+        <!-- include other attributes you want to change: textColor, textStyle, etc -->
+    </style>
+
+    <style name="ToolbarTitleAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">20sp</item>
+        <!-- include other attributes you want to change: textColor, textStyle, etc -->
+    </style>
+
+    <style name="ToolbarSubtitleAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextAppearance.Widget.Event.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <!--Any text styling can be done here-->
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/black_light_transparent</item>
+    </style>
+
+
+    <style name="DefaultSeekBar" parent="android:Widget">
+        <item name="dsb_indicatorTextAppearance">@style/DefaultIndicatorTextAppearance</item>
+        <item name="dsb_progressColor">@color/colorAccent</item>
+        <item name="dsb_trackColor">@color/divider_grey_color</item>
+        <item name="dsb_rippleColor">@color/colorAccent</item>
+        <item name="dsb_indicatorColor">@color/dsb_progress_color</item>
+        <item name="dsb_indicatorElevation">4dp</item>
+        <item name="dsb_mirrorForRtl">true</item>
+    </style>
+
+    <style name="DefaultIndicatorTextAppearance" parent="android:TextAppearance.Small">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">6dp</item>
+    </style>
+
+    <style name="CarDashBoardTab" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/scale_16dp"
+        android:layout_marginRight="@dimen/scale_16dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <com.carnot.custom_views.AppTextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/scale_4dp"
+            android:layout_marginTop="@dimen/scale_29dp"
+            android:gravity="center_vertical"
+            android:text="@string/lbl_share_location"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/linear_container_witfamily"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scale_64dp"
+            android:layout_marginTop="@dimen/scale_16dp"
+            android:background="@color/setting_box">
+
+            <com.carnot.custom_views.AppRadioButtom
+                android:id="@+id/radio_withfamily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/scale_10dp"
+                android:checked="true"
+                android:text="@string/lbl_with_family" />
+
+        </LinearLayout>
+
+        <com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout_family"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/setting_box"
+            android:padding="@dimen/scale_15dp"
+            android:paddingLeft="@dimen/scale_15dp"
+            android:paddingTop="@dimen/scale_42dp"
+            app:ael_duration="@integer/expand_animation_duration"
+            app:ael_interpolator="decelerate">
+
+            <TextView
+                android:id="@+id/one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+
+                android:text="
+    sample.sample.sample.sample.sample.sample.sample.sample.sample.sample.\n
+    sample.sample.sample.sample.sample.sample.sample.sample.sample.sample.\n
+    "
+                android:textColor="@color/white" />
+        </com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_container_custom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scale_64dp"
+            android:layout_marginTop="@dimen/scale_2dp"
+            android:background="@color/setting_box">
+
+            <com.carnot.custom_views.AppRadioButtom
+                android:id="@+id/radio_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/scale_10dp"
+                android:checked="false"
+
+                android:text="@string/lbl_custom" />
+        </LinearLayout>
+
+        <com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout_custom11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/setting_box"
+            android:padding="@dimen/scale_15dp"
+            android:paddingTop="@dimen/scale_20dp"
+            app:ael_duration="@integer/expand_animation_duration"
+            app:ael_interpolator="decelerate">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.carnot.custom_views.expandablelayout.ExpandableRelativeLayout>
+    </LinearLayout>
+</ScrollView>

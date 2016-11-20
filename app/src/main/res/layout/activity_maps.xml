@@ -1,0 +1,209 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/coordinatorlayout"
+        android:background="@color/dialog_background_color"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:weightSum="7"
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+<!--Map Layout-->
+        <LinearLayout
+            android:layout_weight="4"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/scale_0dp">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                android:id="@+id/locationMarker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/imageMarker"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_location_purple_big" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+
+
+<!--Content Layout-->
+        <LinearLayout
+            android:background="@color/divider_grey_color"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scale_0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/place_fragment_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <fragment
+                        android:id="@+id/place_fragment"
+                        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </android.support.v7.widget.CardView>
+
+                <RelativeLayout
+                    android:layout_below="@+id/place_fragment_card"
+                    android:orientation="horizontal"
+                    android:id="@+id/name_goefence"
+                    android:layout_marginTop="@dimen/scale_8dp"
+                    android:layout_marginLeft="@dimen/scale_16dp"
+                    android:layout_marginRight="@dimen/scale_16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/name_txtv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name: "
+                        android:textColor="@color/white"
+                        android:layout_marginTop="@dimen/scale_12dp"
+                        android:textSize="@dimen/textsize_15sp"
+                        />
+
+                    <com.carnot.custom_views.AppEditTextLight
+                        android:id="@+id/txt_location"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_toRightOf="@id/name_txtv"
+                        android:layout_marginTop="@dimen/scale_4dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:inputType="textNoSuggestions"
+                        android:singleLine="true"
+                        android:textColor="@color/disc_shadow_border"
+                        android:textSize="@dimen/textsize_15sp"
+                        android:layout_alignParentTop="true" />
+
+                    <!--<EditText-->
+                        <!--android:id="@+id/txt_location"-->
+                        <!--android:textSize="@dimen/scale_16dp"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingTop="@dimen/scale_0dp"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:gravity="left"-->
+                        <!--android:autoLink="all"/>-->
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_below="@id/name_goefence"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_marginLeft="@dimen/scale_16dp"
+                        android:layout_marginRight="@dimen/scale_16dp"
+                        android:layout_marginTop="@dimen/scale_20dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/geo_radius_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            />
+
+                        <com.carnot.custom_views.customseekbar.DiscreteSeekBar
+                                android:id="@+id/geo_discreteSeekbar"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/scale_20dp"
+                                android:layout_centerInParent="true"
+                                android:layout_toRightOf="@+id/geo_radius_tv"
+                                android:layout_marginLeft="@dimen/scale_10dp"
+                                android:layout_marginRight="@dimen/scale_10dp"
+                                app:dsb_indicatorColor="@color/colorAccent"
+                                app:dsb_indicatorElevation="5dp"
+                                app:dsb_indicatorTextAppearance="@style/DefaultIndicatorTextAppearance"
+                                app:dsb_max="1000"
+                                app:dsb_min="100"
+                                app:dsb_mirrorForRtl="true"
+                                app:dsb_progressColor="@color/colorAccent"
+                                app:dsb_trackColor="@color/dsb_progress_color" />
+
+                    </RelativeLayout>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.carnot.custom_views.AppButton
+                        android:text="save"
+                        android:id="@+id/geo_save_button"
+                        android:layout_margin="@dimen/scale_5dp"
+                        android:layout_weight="1"
+                        android:padding="@dimen/scale_5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <com.carnot.custom_views.AppButton
+                        android:text="Discard"
+                        android:id="@+id/geo_discard_button"
+                        android:layout_margin="@dimen/scale_5dp"
+                        android:layout_weight="1"
+                        android:padding="@dimen/scale_5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>

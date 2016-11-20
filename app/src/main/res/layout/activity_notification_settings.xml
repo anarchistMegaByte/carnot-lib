@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parentLayout"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <com.carnot.custom_views.VerticalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:fillViewport="true">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/accident_control_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/scale_16dp"
+                        android:layout_marginRight="@dimen/scale_16dp"
+                        android:layout_marginTop="@dimen/scale_15dp"
+                        android:orientation="horizontal">
+
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/accident_alert"
+                            android:textColor="@color/white"
+                            android:id="@+id/appTextViewMedium_Accident" />
+
+                        <CheckBox
+                            android:id="@+id/chk_Accident"
+                            android:layout_width="@dimen/scale_45dp"
+                            android:layout_height="@dimen/scale_45dp"
+                            android:button="@drawable/switch_selector"
+                            android:checked="false" />
+                        <ImageButton
+                            android:id="@+id/accident_settings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="?attr/colorPrimary"
+                            android:src="@drawable/ic_settings_white_24dp"/>
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:layout_below="@+id/accident_control_ll"
+                        android:id="@+id/accident_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.carnot.custom_views.AppTextViewLight
+                            android:id="@+id/tv_accident"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/scale_16dp"
+                            android:layout_marginRight="@dimen/scale_16dp"
+                            android:layout_marginTop="@dimen/scale_16dp"
+                            android:text="@string/accident_notif_info"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/towing_control_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/scale_16dp"
+                        android:layout_marginRight="@dimen/scale_16dp"
+                        android:layout_marginTop="@dimen/scale_15dp"
+                        android:orientation="horizontal">
+
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/towing_alert"
+                            android:textColor="@color/white"
+                            android:id="@+id/appTextViewMedium_Towing" />
+
+                        <CheckBox
+                            android:id="@+id/chk_Towing"
+                            android:layout_width="@dimen/scale_45dp"
+                            android:layout_height="@dimen/scale_45dp"
+                            android:button="@drawable/switch_selector"
+                            android:checked="false" />
+                        <ImageButton
+                            android:id="@+id/towing_settings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="?attr/colorPrimary"
+                            android:src="@drawable/ic_settings_white_24dp"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:layout_below="@+id/towing_control_ll"
+                        android:id="@+id/towing_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.carnot.custom_views.AppTextViewLight
+                            android:id="@+id/tv_towing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/scale_16dp"
+                            android:layout_marginRight="@dimen/scale_16dp"
+                            android:layout_marginTop="@dimen/scale_16dp"
+                            android:text="In case of towing we immediately inform you"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/vandalism_notif_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/scale_16dp"
+                        android:layout_marginRight="@dimen/scale_16dp"
+                        android:layout_marginTop="@dimen/scale_15dp"
+                        android:orientation="horizontal">
+
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/lbl_Vandalism"
+                            android:textColor="@color/white"
+                            android:id="@+id/appTextViewMedium_Vandalism" />
+
+                        <CheckBox
+                            android:id="@+id/chk_Vandalism"
+                            android:layout_width="@dimen/scale_45dp"
+                            android:layout_height="@dimen/scale_45dp"
+                            android:button="@drawable/switch_selector"
+                            android:checked="false" />
+                        <ImageButton
+                            android:id="@+id/vandal_settings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="?attr/colorPrimary"
+                            android:src="@drawable/ic_settings_white_24dp"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:layout_below="@+id/vandalism_notif_ll"
+                        android:id="@+id/vandal_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.carnot.custom_views.AppTextViewLight
+                            android:id="@+id/tv_vandal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/scale_16dp"
+                            android:layout_marginRight="@dimen/scale_16dp"
+                            android:layout_marginTop="@dimen/scale_16dp"
+                            android:text="Alerts you in case of vandalism during night. Please set the time for alert."
+                            android:textColor="@color/white" />
+
+                        <RelativeLayout
+                            android:layout_below="@+id/tv_vandal"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/scale_200dp">
+
+                            <RelativeLayout
+                                android:background="@color/black_light_transparent"
+                                android:layout_margin="@dimen/scale_16dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <com.tripadvisor.seekbar.ClockView
+                                        android:id="@+id/min_depart_time_clock_view"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1" />
+
+                                    <com.tripadvisor.seekbar.ClockView
+                                        android:id="@+id/max_depart_time_clock_view"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="1" />
+                                </LinearLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="20dip"
+                                    android:maxWidth="60dp"
+                                    android:text="TO"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/disabled_gray"
+                                    android:textSize="13dip" />
+
+
+                            </RelativeLayout>
+
+
+
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/rash_notif_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/scale_16dp"
+                        android:layout_marginRight="@dimen/scale_16dp"
+                        android:layout_marginTop="@dimen/scale_15dp"
+                        android:orientation="horizontal">
+
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/lbl_Rash_Driving"
+                            android:textColor="@color/white"
+                            android:id="@+id/appTextViewMedium" />
+
+                        <CheckBox
+                            android:id="@+id/chk_speedthreshold"
+                            android:layout_width="@dimen/scale_45dp"
+                            android:layout_height="@dimen/scale_45dp"
+                            android:button="@drawable/switch_selector"
+                            android:checked="false" />
+                        <ImageButton
+                            android:id="@+id/rash_settings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="?attr/colorPrimary"
+                            android:src="@drawable/ic_settings_white_24dp"/>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_below="@+id/rash_notif_ll"
+                        android:visibility="gone"
+                        android:id="@+id/expandable_threshold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="@dimen/scale_16dp"
+                        android:animateLayoutChanges="true"
+                        android:background="@color/black_light_transparent">
+                        <!--app:ael_duration="@integer/expand_animation_duration"
+                        app:ael_expanded="false"
+                        app:ael_interpolator="decelerate"-->
+
+                        <com.carnot.custom_views.AppTextViewLight
+                            android:id="@+id/tv_speed_threshold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/scale_16dp"
+                            android:layout_marginRight="@dimen/scale_16dp"
+                            android:layout_marginTop="@dimen/scale_16dp"
+                            android:text="@string/lbl_notification_settings_info"
+                            android:textColor="@color/white" />
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_speed_threshold"
+                            android:orientation="vertical">
+
+                            <com.carnot.custom_views.AppTextViewMedium
+                                android:id="@+id/lbl_speed_threshold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:layout_marginTop="@dimen/scale_16dp"
+                                android:text="@string/lbl_Speed_Threshold" />
+
+                            <com.carnot.custom_views.customseekbar.DiscreteSeekBar
+                                android:id="@+id/discreteSeekbar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="@dimen/scale_10dp"
+                                android:layout_marginRight="@dimen/scale_10dp"
+                                android:layout_marginTop="@dimen/scale_35dp"
+                                app:dsb_indicatorColor="@color/colorAccent"
+                                app:dsb_indicatorElevation="5dp"
+                                app:dsb_indicatorTextAppearance="@style/DefaultIndicatorTextAppearance"
+                                app:dsb_max="200"
+                                app:dsb_min="70"
+                                app:dsb_mirrorForRtl="true"
+                                app:dsb_progressColor="@color/colorAccent"
+                                app:dsb_trackColor="@color/dsb_progress_color" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/scale_16dp"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginRight="@dimen/scale_10dp"
+                                android:orientation="horizontal">
+
+                                <com.carnot.custom_views.AppTextViewMedium
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left"
+                                    android:text="@string/lbl_70" />
+
+                                <com.carnot.custom_views.AppTextViewMedium
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:text="@string/lbl_200" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/geo_notif_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/scale_16dp"
+                        android:layout_marginRight="@dimen/scale_16dp"
+                        android:layout_marginTop="@dimen/scale_15dp"
+                        android:orientation="horizontal">
+
+                        <com.carnot.custom_views.AppTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/geofencing"
+                            android:textColor="@color/white" />
+
+                        <CheckBox
+                            android:id="@+id/chk_geofence"
+                            android:layout_width="@dimen/scale_45dp"
+                            android:layout_height="@dimen/scale_45dp"
+                            android:button="@drawable/switch_selector"
+                            android:checked="false" />
+
+                        <ImageButton
+                            android:id="@+id/geofence_settings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="?attr/colorPrimary"
+                            android:src="@drawable/ic_settings_white_24dp"/>
+
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_below="@+id/geo_notif_ll"
+                        android:id="@+id/geo_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.carnot.custom_views.AppTextViewLight
+                            android:id="@+id/tv_geo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/scale_16dp"
+                            android:layout_marginRight="@dimen/scale_16dp"
+                            android:layout_marginTop="@dimen/scale_16dp"
+                            android:text="We will send you a notification when someone exits or enters a particular area called geofence. Please set your geofences"
+                            android:textColor="@color/white" />
+
+
+                        <ListView
+                            android:layout_below="@+id/tv_geo"
+                            android:id="@+id/geofences_list"
+                            android:layout_marginLeft="@dimen/scale_32dp"
+                            android:layout_marginRight="@dimen/scale_16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </ListView>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </FrameLayout>
+    </com.carnot.custom_views.VerticalScrollView>
+
+</LinearLayout>

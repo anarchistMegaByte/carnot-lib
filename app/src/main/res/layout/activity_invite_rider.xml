@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:animateLayoutChanges="true"
+        android:background="@color/black_light_transparent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/scale_16dp"
+        android:paddingRight="@dimen/scale_16dp"
+        android:paddingTop="@dimen/scale_16dp">
+
+        <com.carnot.custom_views.AppTextViewMedium
+            android:id="@+id/txt_search_rider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lbl_search_rider"
+            android:singleLine="true"
+            android:textColor="@color/white" />
+
+        <com.carnot.custom_views.AppEditTextLight
+            android:id="@+id/edt_search_rider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_search_white"
+            android:hint="@string/hint_invite_rider"
+            android:singleLine="true"
+            android:textColor="@color/white" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/scale_10dp"
+            android:paddingTop="@dimen/scale_16dp" />
+
+    </LinearLayout>
+
+    <com.carnot.custom_views.AppButton
+        android:id="@+id/btn_invite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/lbl_send_invite"
+        android:textColor="@color/white" />
+</LinearLayout>

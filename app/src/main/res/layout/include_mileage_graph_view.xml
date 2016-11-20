@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/scale_13dp"
+        android:layout_marginLeft="@dimen/scale_16dp"
+        android:layout_marginRight="@dimen/scale_16dp"
+        android:layout_marginTop="@dimen/scale_29dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.carnot.custom_views.AppTextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_mileage"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+
+        <com.carnot.custom_views.AppTextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" | jan"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_10sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.carnot.custom_views.AppTextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This Month"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_nav_arrow_down_purple" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scale_208dp"
+        android:layout_marginLeft="@dimen/scale_16dp"
+        android:layout_marginRight="@dimen/scale_16dp"
+        android:background="@color/carnot_list_background">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/linechart_mileage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="@dimen/scale_72dp"
+            android:layout_height="@dimen/scale_72dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_status_translucent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.carnot.custom_views.AppTextViewLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="15"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_24sp" />
+
+            <com.carnot.custom_views.AppTextViewLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scale_5dp"
+                android:gravity="center"
+                android:text="@string/lbl_kmpl"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_8sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>
