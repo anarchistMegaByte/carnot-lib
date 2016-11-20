@@ -43,6 +43,7 @@ import com.carnot.App;
 import com.carnot.R;
 import com.carnot.Services.BLEService;
 import com.carnot.activity.ActivityAddNewCarSetup;
+import com.carnot.activity.ActivityAllTrips;
 import com.carnot.activity.ActivityCarDashboard;
 import com.carnot.activity.ActivityCarPassport;
 import com.carnot.activity.ActivityDashboard;
