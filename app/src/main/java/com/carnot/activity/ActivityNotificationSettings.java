@@ -77,6 +77,7 @@ public class ActivityNotificationSettings extends BaseActivity implements ClockV
     private ArrayList<Geofence> geo_list= new ArrayList<>();
     ClockView cv_from;
     ClockView cv_to;
+    Boolean isDBEmpty = false;
 
 
     private RelativeLayout expandableThreshold;
@@ -90,7 +91,7 @@ public class ActivityNotificationSettings extends BaseActivity implements ClockV
     private ImageButton geofence_settings, vandal_settings, tow_settings, rash_settings, accident_settings;
     private GlobalNotifSwitch gns = new GlobalNotifSwitch();
     public DateTime vandal_alert_from = new DateTime(new Date()), vandal_alert_to = new DateTime(new Date());
-    public Snackbar nodbentry;
+    public Snackbar nodbentry, noInternet;
     private DateTime minTime, maxTime;
 
 
@@ -103,18 +104,21 @@ public class ActivityNotificationSettings extends BaseActivity implements ClockV
         snackbar = Snackbar.make(parentLayout, "Geofence Saved", Snackbar.LENGTH_LONG);
         snackbar_notif = Snackbar.make(parentLayout, "Notification Settings Saved", Snackbar.LENGTH_LONG);
 
-        Snackbar noInternet = Snackbar.make(parentLayout, "No Interent Connection. Changes will not be saved", Snackbar.LENGTH_LONG);
+        noInternet = Snackbar.make(parentLayout, "No Internet Connection. Changes will not be saved", Snackbar.LENGTH_LONG);
         View sbView = noInternet.getView();
         TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
-        textView.setTextColor(Color.YELLOW);
         nodbentry = Snackbar
-                .make(parentLayout, "Please connect to internet", Snackbar.LENGTH_LONG)
-                .setAction("OK", new View.OnClickListener() {
+                .make(parentLayout, "Please go to the previous screen and connect to internet. Local database has no data.", Snackbar.LENGTH_INDEFINITE)
+                .setAction("BACK", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         onBackPressed();
                     }
                 });
+        View nodbentryview = nodbentry.getView();
+        TextView nodbentrytv = (TextView) nodbentryview.findViewById(android.support.design.R.id.snackbar_text);
+        nodbentrytv.setMaxLines(3);
+        nodbentry.setActionTextColor(Color.YELLOW);
         Boolean isconnected = Utility.isInternetConnected(this);
         Boolean isconnecting = Utility.isConnectingToInternet(this);
 
@@ -183,6 +187,7 @@ public class ActivityNotificationSettings extends BaseActivity implements ClockV
 
         lblSpeedThreshold = (TextView) links(R.id.lbl_speed_threshold);
         progressBar = (ProgressBar) links(R.id.progress_bar);
+        progressBar.setVisibility(View.VISIBLE);
         expandableThreshold = (RelativeLayout) links(R.id.expandable_threshold);
 
 //        Geofence related
@@ -199,7 +204,7 @@ public class ActivityNotificationSettings extends BaseActivity implements ClockV
                     geofence_rl.setVisibility(View.GONE);
                 }
                 else{
-                geofence_rl.setVisibility(View.VISIBLE);}
+                    geofence_rl.setVisibility(View.VISIBLE);}
             }
         });
 
@@ -437,7 +442,6 @@ public class ActivityNotificationSettings extends BaseActivity implements ClockV
             @Override
             public void successWithString(Object values, WebServiceConfig.WebService webService) {
                 super.successWithString(values, webService);
-                progressBar.setVisibility(View.GONE);
 //                                showToast("Login success " + values.toString());
 
                 JSONObject json = (JSONObject) values;
@@ -464,14 +468,13 @@ public class ActivityNotificationSettings extends BaseActivity implements ClockV
             @Override
             public void failedWithMessage(Object values, WebServiceConfig.WebService webService) {
                 super.failedWithMessage(values, webService);
-                progressBar.setVisibility(View.GONE);
-                showToast("failed login " + values.toString());
+                noInternet.show();
             }
 
             @Override
             public void failedForNetwork(Object values, WebServiceConfig.WebService webService) {
                 super.failedForNetwork(values, webService);
-                progressBar.setVisibility(View.GONE);
+
             }
         });
     }
@@ -588,13 +591,14 @@ public class ActivityNotificationSettings extends BaseActivity implements ClockV
                 public void failedWithMessage(Object values, WebServiceConfig.WebService webService) {
                     super.failedWithMessage(values, webService);
                     progressBar.setVisibility(View.GONE);
-                    showToast("failed login " + values.toString());
+                    noInternet.show();
                 }
 
                 @Override
                 public void failedForNetwork(Object values, WebServiceConfig.WebService webService) {
                     super.failedForNetwork(values, webService);
                     progressBar.setVisibility(View.GONE);
+                    noInternet.show();
                 }
             });
         }
@@ -604,20 +608,21 @@ public class ActivityNotificationSettings extends BaseActivity implements ClockV
             geo_isLive.clear();
             geo_list.clear();
             Log.e(TAG, "getAllGeofence: "  + "Not connected to internet");
+            noInternet.show();
             ArrayList<Geofence> old_data = Geofence.readAll(Integer.valueOf(carId));
             if (old_data.size() > 0) {
-            for (Geofence old_single_geo : old_data) {
-                Log.e(TAG, "getAllGeofence: geo ids saved in local DB: " + old_single_geo.geo_id);
-                geo_names.add(old_single_geo.name);
-                geo_ids.add(Integer.valueOf(old_single_geo.geo_id));
-                if (old_single_geo.isLive != 0) {
-                    geo_isLive.add(true);
-                } else{
-                    geo_isLive.add(false);
+                for (Geofence old_single_geo : old_data) {
+                    Log.e(TAG, "getAllGeofence: geo ids saved in local DB: " + old_single_geo.geo_id);
+                    geo_names.add(old_single_geo.name);
+                    geo_ids.add(Integer.valueOf(old_single_geo.geo_id));
+                    if (old_single_geo.isLive != 0) {
+                        geo_isLive.add(true);
+                    } else{
+                        geo_isLive.add(false);
+                    }
+                    geo_list.add(old_single_geo);
                 }
-                geo_list.add(old_single_geo);
-            }
-            geofence_lv.setAdapter(new GeofencesAdapter(mActivity, geo_names, geo_ids, geo_isLive, geo_list, snackbar));}
+                geofence_lv.setAdapter(new GeofencesAdapter(mActivity, geo_names, geo_ids, geo_isLive, geo_list, snackbar));}
             else{
                 nodbentry.show();
             }
@@ -630,12 +635,12 @@ public class ActivityNotificationSettings extends BaseActivity implements ClockV
     }
 
     public void getGlobalNotifications(){
-        
+
         Boolean isconnected = Utility.isInternetConnected(this);
         Boolean isconnecting = Utility.isConnectingToInternet(this);
-        
+
         if (isconnected && isconnecting) {
-            Log.e(TAG, "getGlobalNotifications: Connected to Internet");
+            Log.e(TAG, "getGlobalNotifications: Connected to Internet ");
             final String carId = getIntent().getStringExtra(ConstantCode.INTENT_CAR_ID);
             WebUtils.call(WebServiceConfig.WebService.GET_GLOBAL_NOTIFICATIONS, new String[]{carId}, null, new NetworkCallbacks() {
                 @Override
@@ -684,13 +689,59 @@ public class ActivityNotificationSettings extends BaseActivity implements ClockV
                 public void failedWithMessage(Object values, WebServiceConfig.WebService webService) {
                     super.failedWithMessage(values, webService);
                     progressBar.setVisibility(View.GONE);
-                    showToast("failed login " + values.toString());
+
+                    ArrayList<GlobalNotifSwitch> all_gns = GlobalNotifSwitch.readAll(Integer.valueOf(carId));
+                    nodbentry.show();
+                    Log.e(TAG, "successWithString: failedWithMessage " + all_gns.size());
+                    if (all_gns.size() > 0) {
+                        gns = all_gns.get(0);
+                        Log.e(TAG, "getGlobalNotifications: " + gns.geofence + " " + gns.accident);
+                        update_UI(gns);
+                        noInternet.show();
+                    }
+                    else{
+                        nodbentry.show();
+                        isDBEmpty = true;
+                    }
                 }
 
                 @Override
                 public void failedForNetwork(Object values, WebServiceConfig.WebService webService) {
                     super.failedForNetwork(values, webService);
                     progressBar.setVisibility(View.GONE);
+
+                    ArrayList<GlobalNotifSwitch> all_gns = GlobalNotifSwitch.readAll(Integer.valueOf(carId));
+                    Log.e(TAG, "successWithString: FailedForNetwork " + all_gns.size());
+                    if (all_gns.size() > 0) {
+                        gns = all_gns.get(0);
+                        Log.e(TAG, "getGlobalNotifications: " + gns.geofence + " " + gns.accident);
+                        update_UI(gns);
+                        noInternet.show();
+                    }
+                    else{
+                        nodbentry.show();
+                        isDBEmpty = true;
+
+                    }
+                }
+
+                @Override
+                public void loadOffline() {
+                    super.loadOffline();
+
+                    ArrayList<GlobalNotifSwitch> all_gns = GlobalNotifSwitch.readAll(Integer.valueOf(carId));
+                    Log.e(TAG, "successWithString: reached here 0 " + all_gns.size());
+                    if (all_gns.size() > 0) {
+                        gns = all_gns.get(0);
+                        Log.e(TAG, "getGlobalNotifications: " + gns.geofence + " " + gns.accident);
+                        update_UI(gns);
+                        noInternet.show();
+                    }
+                    else{
+                        nodbentry.show();
+                        isDBEmpty = true;
+
+                    }
                 }
             });
         }
@@ -702,11 +753,13 @@ public class ActivityNotificationSettings extends BaseActivity implements ClockV
                 gns = all_gns.get(0);
                 Log.e(TAG, "getGlobalNotifications: " + gns.geofence + " " + gns.accident);
                 update_UI(gns);
-                
+                noInternet.show();
+
             }
             else{
-//                TODO add a dialog to send it to previous activity
                 nodbentry.show();
+                isDBEmpty = true;
+
             }
         }
     }
