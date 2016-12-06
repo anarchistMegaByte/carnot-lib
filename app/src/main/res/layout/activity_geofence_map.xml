@@ -104,7 +104,7 @@
                         />
 
                     <com.carnot.custom_views.AppEditTextLight
-                        android:id="@+id/txt_location"
+                        android:id="@+id/txt_location_123"
                         android:layout_alignParentRight="true"
                         android:layout_width="wrap_content"
                         android:layout_toRightOf="@id/name_txtv"
@@ -176,6 +176,7 @@
                     android:layout_height="wrap_content">
 
                     <com.carnot.custom_views.AppButton
+                        android:background="@color/colorAccent"
                         android:text="save"
                         android:id="@+id/geo_save_button"
                         android:layout_margin="@dimen/scale_5dp"
@@ -185,6 +186,7 @@
                         android:layout_height="wrap_content" />
 
                     <com.carnot.custom_views.AppButton
+                        android:background="@color/colorAccent"
                         android:text="Discard"
                         android:id="@+id/geo_discard_button"
                         android:layout_margin="@dimen/scale_5dp"

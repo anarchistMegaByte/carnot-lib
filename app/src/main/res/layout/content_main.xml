@@ -41,6 +41,7 @@
         android:checked="false" />
 
     <com.carnot.custom_views.AppButton
+        android:background="@color/colorAccent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"

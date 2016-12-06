@@ -10,7 +10,7 @@
         <item name="android:buttonTint">@color/colorAccent</item>
     </style>-->
 
- <!--   <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+ <!--   <style name="CustomAppTheme" parent="Theme.AppCompat.NoActionBar">
         &lt;!&ndash; Customize your theme here. &ndash;&gt;
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -28,7 +28,7 @@
     </style>
 -->
 
-    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="CustomAppTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>

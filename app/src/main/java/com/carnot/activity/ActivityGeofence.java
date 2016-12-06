@@ -5,24 +5,17 @@ package com.carnot.activity;
  */
 
 import android.Manifest;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.ResultReceiver;
-import android.provider.Settings;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -33,12 +26,9 @@ import android.widget.Toast;
 import com.carnot.R;
 import com.carnot.Services.FetchAddressIntentService;
 import com.carnot.custom_views.customseekbar.DiscreteSeekBar;
-import com.carnot.global.ConstantCode;
 import com.carnot.global.LocationUtils;
-import com.carnot.global.Utility;
 import com.carnot.libclasses.BaseActivity;
 import com.carnot.models.Cars;
-import com.carnot.network.WebUtils;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
@@ -46,7 +36,6 @@ import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.Status;
-import com.google.android.gms.location.Geofence;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -56,18 +45,11 @@ import com.google.android.gms.maps.model.Circle;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 
-import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.location.places.Place;
-import com.google.android.gms.location.places.ui.PlaceAutocomplete;
-import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
-import com.google.android.gms.common.GooglePlayServicesRepairableException;
-import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocomplete;
 import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
 import com.google.android.gms.location.places.ui.PlaceSelectionListener;
-import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 
 import java.util.HashMap;
@@ -113,14 +95,14 @@ public class ActivityGeofence extends BaseActivity implements PlaceSelectionList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps);
+        setContentView(R.layout.activity_geofence_map);
         mContext = this;
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
 
 //        mLocationMarkerText = (TextView) findViewById(R.id.locationMarkertext);
-        mLocationAddress = (EditText) findViewById(R.id.txt_location);
+        mLocationAddress = (EditText) findViewById(R.id.txt_location_123);
         discard_button = (Button) links(R.id.geo_discard_button);
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorlayout);
         Intent intent = getIntent();
@@ -155,7 +137,7 @@ public class ActivityGeofence extends BaseActivity implements PlaceSelectionList
 
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        locationTextView = (EditText) findViewById(R.id.txt_location);
+        locationTextView = (EditText) findViewById(R.id.txt_location_123);
 //        attributionsTextView = (TextView) findViewById(R.id.txt_attributions);
 
         PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)

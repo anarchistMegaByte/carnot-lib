@@ -39,7 +39,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/CustomAppTheme">
 
         <meta-data
             android:name="net.hockeyapp.android.appIdentifier"
@@ -162,7 +162,7 @@
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.ActivityAddNewCarSetup"
-            android:theme="@style/AppTheme.Dialog"
+            android:theme="@style/CustomAppTheme.Dialog"
             android:screenOrientation="portrait"></activity>
 
         <activity

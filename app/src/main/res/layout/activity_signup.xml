@@ -214,6 +214,7 @@
                     </LinearLayout>
 
                     <com.carnot.custom_views.AppButton
+                        android:background="@color/colorAccent"
                         android:id="@+id/btn_sign_up"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/scale_48dp"

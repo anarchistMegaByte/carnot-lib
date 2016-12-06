@@ -13,7 +13,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/AppProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/scale_16dp"
@@ -164,6 +172,7 @@
                     android:textColor="@color/white" />
 
                 <com.carnot.custom_views.AppButton
+                    android:background="@color/colorAccent"
                     android:id="@+id/btn_sign_in"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/scale_48dp"
@@ -175,14 +184,6 @@
 
             </LinearLayout>
         </ScrollView>
-
-        <ProgressBar
-            android:id="@+id/progress_bar"
-            style="@style/AppProgressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:visibility="gone" />
 
     </FrameLayout>
 </LinearLayout>

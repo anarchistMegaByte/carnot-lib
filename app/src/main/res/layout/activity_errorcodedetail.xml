@@ -63,6 +63,7 @@
                 tools:text="Error Description here" />
 
             <com.carnot.custom_views.AppButton
+                android:background="@color/colorAccent"
                 android:id="@+id/btn_Locate"
                 android:layout_width="@dimen/scale_152dp"
                 android:layout_height="@dimen/scale_36dp"

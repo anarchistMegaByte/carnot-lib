@@ -12,6 +12,7 @@
         android:src="@drawable/intro_one" />
 
     <com.carnot.custom_views.AppButton
+        android:background="@color/colorAccent"
         android:id="@+id/btn_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

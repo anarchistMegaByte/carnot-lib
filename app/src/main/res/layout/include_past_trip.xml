@@ -89,6 +89,7 @@
         </FrameLayout>-->
 
         <com.carnot.custom_views.AppButton
+            android:background="@color/colorAccent"
             android:id="@+id/btn_view_all_trips"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

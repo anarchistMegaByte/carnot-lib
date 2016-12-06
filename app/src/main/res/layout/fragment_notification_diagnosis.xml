@@ -87,6 +87,7 @@
             android:textSize="@dimen/textsize_12sp" />
 
         <com.carnot.custom_views.AppButton
+            android:background="@color/colorAccent"
             android:layout_width="@dimen/scale_136dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/scale_16dp"

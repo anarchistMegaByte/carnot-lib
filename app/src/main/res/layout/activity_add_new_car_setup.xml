@@ -59,6 +59,7 @@
             android:visibility="gone" />
 
         <com.carnot.custom_views.AppButton
+            android:background="@color/colorAccent"
             android:id="@+id/btn_next"
             android:layout_width="match_parent"
             android:layout_height="@dimen/scale_48dp"

@@ -12,7 +12,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
-import com.appsee.Appsee;
+//import com.appsee.Appsee;
 import com.carnot.App;
 import com.carnot.R;
 import com.carnot.Services.BLEService;
@@ -58,7 +58,7 @@ public class ActivitySplash extends BaseActivity {
 
         setContentView(R.layout.activity_splash);
 
-        Appsee.start("4ad4c8bdac9748a4b30095d77171b63f");
+//        Appsee.start("4ad4c8bdac9748a4b30095d77171b63f");
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_DENIED)
         {

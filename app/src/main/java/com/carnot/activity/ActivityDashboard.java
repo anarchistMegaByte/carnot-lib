@@ -139,7 +139,7 @@ public class ActivityDashboard extends BaseActivity {
     /**
      * Initializing full screen Views
      */
-    private void initFullScreenView() {
+    public void initFullScreenView() {
         initMap();
         gcmUtils = new GCMUtils(mActivity);
         gcmUtils.register(new GCMUtils.NotificationReceive() {
